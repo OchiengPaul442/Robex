@@ -8,15 +8,16 @@
     {{-- css link --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     {{-- main css --}}
-    <link rel="stylesheet" href="{{ asset('/css/loader.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/loader.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}" type="text/css">
+    {{-- <link rel="stylesheet" href="{{ asset('') }}"> --}}
     {{-- lib css --}}
-    <link rel="stylesheet" href="{{ asset('/lib/flaticon/font/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ asset('/lib/animate/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/lib/owlcarousel/assets/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/lib/lightbox/css/lightbox.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/lib/slick/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('/lib/slick/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('/lib/flaticon/font/flaticon.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('/lib/animate/animate.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('/lib/owlcarousel/assets/owl.carousel.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('/lib/lightbox/css/lightbox.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('/lib/slick/slick.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('/lib/slick/slick-theme.css') }}" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"

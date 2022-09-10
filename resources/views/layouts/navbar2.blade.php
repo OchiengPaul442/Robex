@@ -11,7 +11,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav text-center">
-                        <a href="{{ route('home') }}" class="nav-item nav-link">Home</a>
+                        <a href="{{ route('main') }}" class="nav-item nav-link">Home</a>
                     </ul>
                 </div>
             </div>

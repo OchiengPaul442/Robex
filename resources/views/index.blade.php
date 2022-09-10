@@ -8,15 +8,15 @@
     {{-- css link --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     {{-- main css --}}
-    <link rel="stylesheet" href="{{ asset('css/loader.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/loader.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     {{-- lib css --}}
-    <link rel="stylesheet" href="{{ asset('lib/flaticon/font/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ asset('lib/animate/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('lib/lightbox/css/lightbox.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('lib/slick/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('lib/slick/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('/lib/flaticon/font/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('/lib/animate/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/lib/owlcarousel/assets/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/lib/lightbox/css/lightbox.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/lib/slick/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('/lib/slick/slick-theme.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -44,15 +44,15 @@
     {{-- loader --}}
     @include('components.loaders.main')
     {{-- js links --}}
-    <script src="{{ asset('js/main.js') }}"></script>
-    <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
-    <script src="{{ asset('lib/wow/wow.min.js') }}"></script>
-    <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('lib/isotope/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('lib/lightbox/js/lightbox.min.js') }}"></script>
-    <script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{ asset('lib/counterup/counterup.min.js') }}"></script>
-    <script src="{{ asset('lib/slick/slick.min.js') }}"></script>
+    <script src="{{ asset('/js/main.js') }}"></script>
+    <script src="{{ asset('/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('/lib/isotope/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('/lib/lightbox/js/lightbox.min.js') }}"></script>
+    <script src="{{ asset('/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('/lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ asset('/lib/slick/slick.min.js') }}"></script>
 </body>
 
 </html>

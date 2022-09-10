@@ -8,6 +8,7 @@
     {{-- css link --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     {{-- main css --}}
+    <link rel="stylesheet" href="{{ asset('css/loader.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     {{-- lib css --}}
     <link rel="stylesheet" href="{{ asset('lib/flaticon/font/flaticon.css') }}">
@@ -27,17 +28,21 @@
 </head>
 
 <body>
+
     <div class="wrapper">
         {{-- header section --}}
         @include('layouts.head')
         {{-- main content --}}
-        @yield('content')
+        <div data-bs-spy="scroll" data-bs-target="#navbar-item-tracker">
+            @include('pages.main')
+        </div>
         {{-- footer section --}}
         @include('layouts.foot')
         {{-- back to top button --}}
-        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        @include('components.Button.scrolltotop')
     </div>
-
+    {{-- loader --}}
+    @include('components.loaders.main')
     {{-- js links --}}
     <script src="{{ asset('js/main.js') }}"></script>
     <script src="{{ asset('lib/easing/easing.min.js') }}"></script>

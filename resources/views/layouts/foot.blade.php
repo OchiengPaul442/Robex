@@ -20,21 +20,20 @@
             <div class="col-md-6 col-lg-3">
                 <div class="footer-link">
                     <h2>Services Areas</h2>
-                    <a href="{{ route('services') }}">Building Construction</a>
-                    <a href="{{ route('services') }}">House Renovation</a>
-                    <a href="{{ route('services') }}">Architecture Design</a>
-                    <a href="{{ route('services') }}">Interior Design</a>
-                    <a href="{{ route('services') }}">Painting</a>
+                    <a href="#services">Building Construction</a>
+                    <a href="#services">House Renovation</a>
+                    <a href="#services">Architecture Design</a>
+                    <a href="#services">Interior Design</a>
+                    <a href="#services">Painting</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="footer-link">
                     <h2>Useful Pages</h2>
-                    <a href="{{ route('about') }}">About Us</a>
-                    <a href="{{ route('contact') }}">Contact Us</a>
-                    <a href="{{ route('team') }}">Our Team</a>
-                    <a href="{{ route('projects') }}">Projects</a>
-                    <a href="">Testimonial</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#testimonials">Testimonial</a>
                 </div>
             </div>
             {{-- news letter form --}}
@@ -53,13 +52,13 @@
         <div class="f-menu">
             <a href="{{ route('terms') }}">Terms of use</a>
             <a href="{{ route('privacy') }}">Privacy policy</a>
-            <a href="{{ route('home') }}">FQAs</a>
+            <a href="#FAQs">FQAs</a>
         </div>
     </div>
     <div class="container copyright">
         <div class="row">
             <div class="col-md-6">
-                <p>&copy; <a href="#">ROBEX-CO</a>, All Right Reserved.</p>
+                <p>&copy; <a href="#home">ROBEX-CO</a>, All Right Reserved.</p>
             </div>
             <div class="col-md-6">
                 <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>

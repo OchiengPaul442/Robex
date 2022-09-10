@@ -10,15 +10,8 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav" id="navbar-item-tracker">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
-                        <a href="#services" class="nav-item nav-link">Service</a>
-                        <a href="#projects" class="nav-item nav-link">Project</a>
-                        <a href="#FAQs" class="nav-item nav-link">FAQs</a>
-                        <a href="#news" class="nav-item nav-link">News</a>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
-                        <a href="#partners" class="nav-item nav-link">Our Partners</a>
+                    <ul class="navbar-nav text-center">
+                        <a href="{{ route('home') }}" class="nav-item nav-link">Home</a>
                     </ul>
                 </div>
             </div>

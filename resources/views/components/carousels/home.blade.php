@@ -6,7 +6,7 @@
             <div class="carousel-caption">
                 <p class="animated fadeInRight">We Are Professional</p>
                 <h1 class="animated fadeInLeft">For Your Dream Project</h1>
-                <a class="btn animated fadeInUp" href="{{ route('projects') }}">Find out More</a>
+                <a class="btn animated fadeInUp" href="#about">Find out More</a>
             </div>
         </div>
         <div class="carousel-item">
@@ -14,7 +14,7 @@
             <div class="carousel-caption">
                 <p class="animated fadeInRight">Professional Builder</p>
                 <h1 class="animated fadeInLeft">We Build Your Home</h1>
-                <a class="btn animated fadeInUp" href="{{ route('projects') }}">Find out More</a>
+                <a class="btn animated fadeInUp" href="#about">Find out More</a>
             </div>
         </div>
         <div class="carousel-item">
@@ -22,7 +22,7 @@
             <div class="carousel-caption">
                 <p class="animated fadeInRight">We Are Trusted</p>
                 <h1 class="animated fadeInLeft">For Your Dream Home</h1>
-                <a class="btn animated fadeInUp" href="{{ route('projects') }}">Find out More</a>
+                <a class="btn animated fadeInUp" href="#about">Find out More</a>
             </div>
         </div>
     </div>

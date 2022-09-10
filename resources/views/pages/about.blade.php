@@ -1,25 +1,11 @@
-@extends('index')
-
-@section('content')
-    <!-- Page Header Start -->
-    <div class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2>{{ $heading }}</h2>
-                </div>
-                <div class="col-12">
-                    <a href="">Home</a>
-                    <a href="">About Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
+<section id="about">
     <!-- About Start -->
-    <div class="about wow fadeInUp" data-wow-delay="0.1s">
+    <div id="about" class="about wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
+             <div class="section-header text-center">
+               <p>About Us</p>
+                <h2>Our Cores</h2>
+            </div>
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
                     <div class="about-img">
@@ -40,20 +26,22 @@
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur
                             facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum,
-                            viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis
+                            viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur
+                            convallis
                             porttitor. Aliquam interdum at lacus non blandit.
                         </p>
-                        <a class="btn" href="">Learn More</a>
+                        <div class="section-header text-left">
+                            <h5>Our Aim</h5>
+                        </div>
+                        <p>
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi.
+                            Curabitur
+                            facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum"
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
-
-    {{-- Facts section --}}
-    @include('components.Facts.Facts')
-
-    {{-- FAQs section --}}
-    @include('components.FAQs.FAQs')
-@endsection
+</section>

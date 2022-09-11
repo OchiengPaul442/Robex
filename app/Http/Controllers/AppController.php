@@ -12,6 +12,12 @@ class AppController extends Controller
         $title = 'Robex-co';
         return view('index', compact('title'));
     }
+    // index page
+    public function index1()
+    {
+        $title = 'Robex-co';
+        return view('welcome', compact('title'));
+    }
     // terms page
     public function terms()
     {

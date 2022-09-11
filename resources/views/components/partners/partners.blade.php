@@ -7,19 +7,19 @@
         <div class="text-center">
             <div class="row align-items-center">
                 <div class="col">
-                    <img src="{{ asset('img/KCCA.png') }}" alt="partner-logos">
+                    <img width="280px" src="{{ asset('img/KCCA.png') }}" alt="partner-logos">
                 </div>
                 <div class="col">
-                    <img src="{{ asset('img/unra.png') }}" alt="partner-logos">
+                    <img width="280px" src="{{ asset('img/unra.png') }}" alt="partner-logos">
                 </div>
                 <div class="col">
-                    <img src="{{ asset('img/ucc.png') }}" alt="partner-logos">
+                    <img width="280px" src="{{ asset('img/ucc.png') }}" alt="partner-logos">
                 </div>
                 <div class="col">
-                    <img src="{{ asset('img/msw.png') }}" alt="partner-logos">
+                    <img width="280px" src="{{ asset('img/msw.png') }}" alt="partner-logos">
                 </div>
                 <div class="col">
-                    <img src="{{ asset('img/msw.png') }}" alt="partner-logos">
+                    <img width="280px" src="{{ asset('img/msw.png') }}" alt="partner-logos">
                 </div>
             </div>
         </div>

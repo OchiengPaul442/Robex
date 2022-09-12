@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{-- favicon --}}
+    <link rel="shortcut icon" href="{{ asset('logo2.png') }}" type="image/x-icon">
     {{-- css link --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     {{-- main css --}}
@@ -46,6 +49,7 @@
     @include('components.loaders.main')
     {{-- js links --}}
     <script src="{{ asset('/js/main.js') }}"></script>
+    <script src="{{ asset('js/validations.js') }}"></script>
     <script src="{{ asset('/lib/easing/easing.min.js') }}"></script>
     <script src="{{ asset('/lib/wow/wow.min.js') }}"></script>
     <script src="{{ asset('/lib/owlcarousel/owl.carousel.min.js') }}"></script>

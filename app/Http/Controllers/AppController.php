@@ -10,10 +10,10 @@ class AppController extends Controller
     public function index()
     {
         $title = 'Robex-co';
-        return view('index', compact('title'));
+        return view('layouts.index', compact('title'));
     }
     // index page
-    public function index1()
+    public function welcome()
     {
         $title = 'Robex-co';
         return view('welcome', compact('title'));

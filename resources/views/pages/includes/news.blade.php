@@ -3,8 +3,8 @@
     <div class="blog">
         <div class="container">
             <div class="section-header text-center">
-                <p>Latest News</p>
                 <h2>News from Robex-Co</h2>
+                <p>Latest News</p>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">

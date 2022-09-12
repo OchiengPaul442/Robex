@@ -2,8 +2,8 @@
     <!-- Testimonial Start -->
     <div class="testimonial wow fadeIn" data-wow-delay="0.1s">
         <div class="section-header text-center">
-            <p>Testimonials</p>
             <h2 style="color: white">From Our Customers</h2>
+            <p>Testimonials</p>
         </div>
         <div class="container">
             <div class="row">

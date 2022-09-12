@@ -3,8 +3,8 @@
     <div id="about" class="about wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
              <div class="section-header text-center">
+                 <h2>Our Cores</h2>
                <p>About Us</p>
-                <h2>Our Cores</h2>
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
@@ -14,8 +14,8 @@
                 </div>
                 <div class="col-lg-7 col-md-6">
                     <div class="section-header text-left">
-                        <p>Welcome to Robex-co</p>
                         <h2>5 Years Experience</h2>
+                        <p>Welcome to Robex-co</p>
                     </div>
                     <div class="about-text">
                         <p>

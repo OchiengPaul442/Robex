@@ -42,29 +42,34 @@
 <!-- Feature End-->
 
 {{-- about section --}}
-@include('pages.about')
+@include('pages.includes.about')
 
 {{-- Facts section --}}
-@include('components.Facts.Facts')
+@include('pages.includes.Facts')
 
 {{-- Services section --}}
-@include('components.services.services')
+@include('pages.includes.services')
 
-{{-- FAQs section --}}
-@include('components.FAQs.FAQs')
+{{-- why us section --}}
+{{-- @include('pages.includes.why') --}}
 
 {{-- projects section --}}
-@include('pages.projects')
+@include('pages.includes.projects')
 
 {{-- Testimonial section --}}
-@include('components.testimonials.testimonial')
+@include('pages.includes.testimonial')
+
+{{-- FAQs section --}}
+@include('pages.includes.FAQs')
 
 {{-- news section --}}
-@include('pages.news')
+@include('pages.includes.news')
 
 {{-- contact section --}}
-@include('pages.contact')
+@include('pages.includes.contact')
 
 {{-- partners --}}
-@include('components.partners.partners')
+@include('pages.includes.partners')
 
+{{-- modals --}}
+@include('components.modals.errors')

@@ -3,8 +3,8 @@
     <div class="contact wow fadeInUp">
         <div class="container">
             <div class="section-header text-center">
-                <p>Get In Touch</p>
                 <h2>For Any Query</h2>
+                <p>Get In Touch</p>
             </div>
             <div class="row">
                 <div class="col-md-6">

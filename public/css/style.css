@@ -7,6 +7,8 @@ body {
     background: #8ecae61f;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("../img/construct.jpg"); */
 }
 
 h1,
@@ -43,7 +45,8 @@ a:focus {
     max-width: 1600px;
     margin: 0 auto;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    background: #ffffff;
+    /* background: #ffffff; */
+    background: #e9f5f8;
 }
 
 .back-to-top {
@@ -106,11 +109,13 @@ section {
 .top-bar .logo h1 {
     margin: 0;
     /* color: #023047; */
-    color: white;
+    /* color: white; */
+    color: #ffb703;
     font-size: 60px;
     line-height: 60px;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
+    text-shadow: 0 3px 3px black;
 }
 
 @media (max-width: 767px) {
@@ -177,8 +182,8 @@ section {
     }
 }
 
-@media (max-width:720px) {
-    .top-bar{
+@media (max-width: 720px) {
+    .top-bar {
         display: none;
     }
 }
@@ -190,6 +195,11 @@ section {
     position: relative;
     background: #219ebc;
     transition: 0.3s;
+}
+
+.navbar-brand{
+    color: #ffb703;
+    text-shadow: 0 3px 3px black;
 }
 
 .nav-bar .container-fluid {

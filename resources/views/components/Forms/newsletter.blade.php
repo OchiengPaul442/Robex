@@ -1,4 +1,6 @@
 <div class="form">
-    <input class="form-control" placeholder="Email here">
-    <button class="btn">Submit</button>
+    <form action="#">
+        <input class="form-control" placeholder="Email here" required>
+        <button class="btn">Submit</button>
+    </form>
 </div>

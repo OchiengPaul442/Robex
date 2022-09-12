@@ -1,8 +1,8 @@
 <section id="partners">
     <div class="container">
         <div class="section-header text-center">
-            <p>Our Partners</p>
             <h2>Trusted by Governments & Private Companies of all sizes </h2>
+            <p>Our Partners</p>
         </div>
         <div class="text-center">
             <div class="row align-items-center">

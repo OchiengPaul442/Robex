@@ -3,8 +3,8 @@
     <div class="portfolio">
         <div class="container">
             <div class="section-header text-center">
-                <p>Our Projects</p>
                 <h2>Visit Our Projects</h2>
+                <p>Our Projects</p>
             </div>
             <div class="row">
                 <div class="col-12">

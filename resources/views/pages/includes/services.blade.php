@@ -3,8 +3,8 @@
     <div class="service">
         <div class="container">
             <div class="section-header text-center">
-                <p>Our Services</p>
                 <h2>We Provide Services</h2>
+                <p>Our Services</p>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">

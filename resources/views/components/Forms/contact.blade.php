@@ -1,25 +1,26 @@
-<form name="sentMessage" id="contactForm" novalidate="novalidate">
+<form id="contact-form">
+    @csrf
     <div class="control-group">
-        <input type="text" class="form-control" id="name" placeholder="Your Name"
-            required="required" data-validation-required-message="Please enter your name" />
-        <p class="help-block text-danger"></p>
+        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" value=""
+         />
+        <p class="message-block text-danger name_error"></p>
     </div>
     <div class="control-group">
-        <input type="email" class="form-control" id="email" placeholder="Your Email"
-            required="required" data-validation-required-message="Please enter your email" />
-        <p class="help-block text-danger"></p>
-    </div>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" value=""
+            />
+            <p class="message-block text-danger email_error"></p>
+        </div>
     <div class="control-group">
-        <input type="text" class="form-control" id="subject" placeholder="Subject"
-            required="required" data-validation-required-message="Please enter a subject" />
-        <p class="help-block text-danger"></p>
-    </div>
+        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" value=""
+            />
+            <p class="message-block text-danger subject_error"></p>
+        </div>
     <div class="control-group">
-        <textarea class="form-control" id="message" placeholder="Message" required="required"
-            data-validation-required-message="Please enter your message"></textarea>
-        <p class="help-block text-danger"></p>
-    </div>
+        <textarea class="form-control" name="message" id="message" placeholder="Message"
+            ></textarea>
+            <p class="message-block text-danger message_error"></p>
+        </div>
     <div>
-        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
+        <button class="btn" type="submit">Send Message</button>
     </div>
 </form>

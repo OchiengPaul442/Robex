@@ -3,8 +3,8 @@
     <div class="faqs">
         <div class="container">
             <div class="section-header text-center">
-                <p>Frequently Asked Question</p>
                 <h2>You May Ask</h2>
+                <p>Frequently Asked Question</p>
             </div>
             <div class="row">
                 <div class="col-md-6">

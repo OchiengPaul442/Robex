@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ asset('img/logo-black.png') }}" type="image/x-icon">
     <style>
         .hero-text a {
             text-decoration: none;
@@ -46,13 +47,19 @@
         .hero-text p {
             font-size: 19px;
         }
+
+        @media (max-width: 767px) {
+            .hero-text img{
+                width: 300px;
+            }
+        }
     </style>
     <title>welcome page</title>
 </head>
 
 <body style="background: #219dbc7a">
     <div class="hero-image">
-        <div class="hero-text">            
+        <div class="hero-text">
             <h1>Welcome to</h1>
             <img src="{{ asset('img/logo.svg') }}" alt="">
             <p>Your Best stop for all your Engineering needs.</p>

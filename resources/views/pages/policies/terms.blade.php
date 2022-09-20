@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{-- css link --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    {{-- favicon --}}
+
+    <link rel="shortcut icon" href="{{ asset('img/logo.svg') }}" type="image/x-icon">
     {{-- main css --}}
     <link rel="stylesheet" href="{{ asset('css/loader.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -17,10 +18,9 @@
     <link rel="stylesheet" href="{{ asset('lib/lightbox/css/lightbox.min.css') }}">
     <link rel="stylesheet" href="{{ asset('lib/slick/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('lib/slick/slick-theme.css') }}">
+    {{-- css link --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -31,7 +31,7 @@
 
     <div class="wrapper">
         {{-- header section --}}
-        @include('layouts.head')
+        @include('layouts.site.head')
         {{-- main content --}}
         <div class="main_content">
             <div class="section-header text-center">
@@ -83,7 +83,8 @@
             </ul>
 
             <p>This Agreement shall begin on the date hereof. Our Terms and Conditions were created with the help of the
-                <a href="https://www.termsandconditionsgenerator.com/">Free Terms and Conditions Generator</a>.</p>
+                <a href="https://www.termsandconditionsgenerator.com/">Free Terms and Conditions Generator</a>.
+            </p>
 
             <p>Parts of this website offer an opportunity for users to post and exchange opinions and information in
                 certain areas of the website. robex does not filter, edit, publish or review Comments prior to their
@@ -223,7 +224,7 @@
                 will not be liable for any loss or damage of any nature.</p>
         </div>
         {{-- footer section --}}
-        @include('layouts.foot')
+        @include('layouts.site.foot')
         {{-- back to top button --}}
         @include('components.Button.scrolltotop')
     </div>

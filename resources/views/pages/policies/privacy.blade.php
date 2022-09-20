@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{-- css link --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    {{-- main css --}}
+    {{-- favicon --}}
+
+    <link rel="shortcut icon" href="{{ asset('img/logo.svg') }}" type="image/x-icon">
+     {{-- main css --}}
     <link rel="stylesheet" href="{{ asset('css/loader.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     {{-- lib css --}}
@@ -17,21 +18,25 @@
     <link rel="stylesheet" href="{{ asset('lib/lightbox/css/lightbox.min.css') }}">
     <link rel="stylesheet" href="{{ asset('lib/slick/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('lib/slick/slick-theme.css') }}">
+    {{-- css link --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <title>{{ $title }}</title>
+    <style>
+        a {
+            text-decoration: none
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="wrapper">
         {{-- header section --}}
-        @include('layouts.head')
+        @include('layouts.site.head')
         {{-- main content --}}
         <div class="main_content">
             <div class="section-header text-center">
@@ -347,7 +352,7 @@
             </ul>
         </div>
         {{-- footer section --}}
-        @include('layouts.foot')
+        @include('layouts.site.foot')
         {{-- back to top button --}}
         @include('components.Button.scrolltotop')
     </div>

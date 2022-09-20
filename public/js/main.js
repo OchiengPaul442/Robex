@@ -1,13 +1,3 @@
-// Complete page is fully loaded, including all frames, objects and images
-$(document).ready(function () {
-    setTimeout(function () {
-        $("body").addClass("loaded");
-    }, 2000);
-
-    // scroll to top once loaded
-    $(window).scrollTop(0);
-});
-
 $(document).ready(function () {
     // Initiate the wowjs
     new WOW().init();
@@ -21,7 +11,7 @@ $(document).ready(function () {
         }
     });
     $(".back-to-top").click(function () {
-        $("html, body").animate({ scrollTop: 0 }, 1200, "easeInOutExpo");
+        $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
         return false;
     });
 
@@ -92,19 +82,22 @@ $(document).ready(function () {
         height: "160px",
     });
 
-    // Portfolio isotope and filter
-    var portfolioIsotope = $(".portfolio-container").isotope({
-        itemSelector: ".portfolio-item",
-        layoutMode: "fitRows",
+    //more about us
+    $(".tabLink").each(function () {
+        $(this).click(function () {
+            tabeId = $(this).attr("id");
+            $(".tabLink").removeClass("activeLink");
+            $(this).addClass("activeLink");
+            $(".tabcontent").addClass("hide");
+            $("#" + tabeId + "-1").removeClass("hide");
+            return false;
+        });
     });
 
-    $("#portfolio-flters li").on("click", function () {
-        $("#portfolio-flters li").removeClass("filter-active");
-        $(this).addClass("filter-active");
-
-        portfolioIsotope.isotope({ filter: $(this).data("filter") });
-    });
-
-    // why us section
-    
+    // Complete page is fully loaded, including all frames, objects and images
+    setTimeout(function () {
+        $("body").addClass("loaded");
+        // scroll to top once loaded
+        $(window).scrollTop(0);
+    }, 3000);
 });

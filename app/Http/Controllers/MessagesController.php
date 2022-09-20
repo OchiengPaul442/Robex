@@ -8,6 +8,28 @@ use App\Http\Requests\StoremessagesRequest;
 class MessagesController extends Controller
 {
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $title = 'Client Messages';
+        return view('Admin.pages.messages', compact('title'));        
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\projects  $projects
+     * @return \Illuminate\Http\Response
+     */
+    public function show(messages $messages)
+    {
+        //
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoremessagesRequest  $request
@@ -35,5 +57,16 @@ class MessagesController extends Controller
         } else {
             return response()->json(['error' => 'Error! Message not sent, please try again.']);
         }
+    }
+
+     /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\projects  $projects
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 }

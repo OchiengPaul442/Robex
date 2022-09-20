@@ -1,4 +1,4 @@
-<form id="contact-form">
+<form id="contact-form" action="{{ route('messages.store') }}">
     @csrf
     <div class="control-group">
         <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" value=""

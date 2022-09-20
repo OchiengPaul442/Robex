@@ -2,7 +2,7 @@
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="{{ asset('img/carousel-1.jpg') }}" class="d-block w-100" alt="robex image">
+            <img src="{{ asset('img/carousel3.jpg') }}" class="d-block w-100" alt="">
             <div class="carousel-caption">
                 <p class="animated fadeInRight">We Are Professional</p>
                 <h1 class="animated fadeInLeft">For Your Dream Project</h1>
@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('img/carousel-2.jpg') }}" class="d-block w-100" alt="robex image">
+            <img src="{{ asset('img/carousel2.jpg') }}" class="d-block w-100" alt="">
             <div class="carousel-caption">
                 <p class="animated fadeInRight">Professional Builder</p>
                 <h1 class="animated fadeInLeft">We Build Your Home</h1>
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('img/carousel-3.jpg') }}" class="d-block w-100" alt="robex image">
+            <img src="{{ asset('img/electrical.jpg') }}" class="d-block w-100" alt="">
             <div class="carousel-caption">
                 <p class="animated fadeInRight">We Are Trusted</p>
                 <h1 class="animated fadeInLeft">For Your Dream Home</h1>

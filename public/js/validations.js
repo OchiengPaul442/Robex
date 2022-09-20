@@ -5,6 +5,7 @@ $(document).ready(function () {
         },
     });
 
+    // contact form
     $("#contact-form").on("submit", function (e) {
         // prevent default form submit
         e.preventDefault();
@@ -16,7 +17,7 @@ $(document).ready(function () {
         var message = $("#message").val();
         // send ajax request
         $.ajax({
-            url: "/contact",
+            url: $(this).attr('action'),
             type: "POST",
             dataType: "json",
             data: {
@@ -30,9 +31,9 @@ $(document).ready(function () {
                 $("#contact-form")[0].reset();
                 $(".success-message").text(response.success);
                 $(".fail-message").text(response.error);
-                $("#errormodal").modal('show');
+                $("#errormodal").modal("show");
                 setTimeout(function () {
-                    $("#errormodal").modal('hide');
+                    $("#errormodal").modal("hide");
                 }, 2000);
             },
             error: function (response) {

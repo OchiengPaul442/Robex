@@ -26,11 +26,3 @@ window.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 
-// datatables
-$(document).ready(function () {
-    $("#projectsTable").DataTable();
-    $("#newsTable").DataTable();
-    $("#testimonialsTable").DataTable();
-    $("#servicesTable").DataTable();
-    $("#FAQsTable").DataTable();
-});

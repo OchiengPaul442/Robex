@@ -9,9 +9,9 @@
 
     <link rel="shortcut icon" href="{{ asset('img/logo-black.png') }}" type="image/x-icon">
     {{-- main css --}}
-    {{-- <link rel="stylesheet" href="{{ asset('css/loader.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('/css/style.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/loader.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('/css/style.min.css') }}"> --}}
     {{-- lib css --}}
     <link rel="stylesheet" href="{{ asset('lib/flaticon/font/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('lib/animate/animate.min.css') }}">

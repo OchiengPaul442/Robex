@@ -15,11 +15,11 @@ class AppController extends Controller
     public function index()
     {
         $title = 'Cube Engineering';
-        $projects = projects::all();
-        $testimonials = Testimonial::all();
-        $services = services::all();
-        $FAQs = FAQs::all();
-        return view('layouts.site.index', compact('title', 'projects', 'testimonials', 'services', 'FAQs'));
+        // $projects = projects::all();
+        // $testimonials = Testimonial::all();
+        // $services = services::all();
+        // $FAQs = FAQs::all();
+        return view('layouts.site.index', compact('title'));
     }
     // index page
     public function welcome()

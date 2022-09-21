@@ -39,7 +39,7 @@ class AdminController extends Controller
         $messagesCount = messages::count();
         $servicesCount = services::count();
 
-        return view('Admin.pages.dashboard', compact('title', 'projects', 'testimonials', 'services', 'FAQs','servicesCount', 'projectsCount', 'testimonialsCount', 'messagesCount'));
+        return view('Admin.pages.Dashboard', compact('title', 'projects', 'testimonials', 'services', 'FAQs','servicesCount', 'projectsCount', 'testimonialsCount', 'messagesCount'));
     }
 
     // profile form page

@@ -16,7 +16,7 @@
     <title>{{ $title }}</title>
     {{-- favicon --}}
     <link rel="shortcut icon" href="{{ asset('/img/logo.svg') }}" type="image/x-icon">
-    <link href="{{ asset('/css/admin.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     {{-- datatables css --}}
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">

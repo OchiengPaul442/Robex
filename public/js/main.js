@@ -7,7 +7,7 @@ $(document).ready(function () {
         $("body").addClass("loaded");
         $(".innerpoint").hide();
         // scroll to top once loaded
-    }, 4500);
+    }, 5000);
 
     // Initiate the wowjs
     new WOW().init();

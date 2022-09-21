@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\admin;
 use App\Models\projects;
-use App\Models\news;
 use App\Models\Testimonial;
 use App\Models\messages;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\StoreadminRequest;
 use App\Http\Requests\UpdateadminRequest;
+use App\Models\FAQs;
+use App\Models\services;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
@@ -20,6 +21,32 @@ class AdminController extends Controller
     {
         $title = 'Admin login';
         return view('Admin.Auth.login', compact('title'));
+    }
+
+    // dashboard
+    public function dashboard(projects $projects, Testimonial $testimonials)
+    {
+        $title = 'Admin Dashboard';
+        // get all data from database
+        $projects = projects::all();
+        $testimonials = Testimonial::all();
+        $messages = messages::all();
+        $services = services::all();
+        $FAQs = FAQs::all();
+        // count items
+        $projectsCount = $projects->count();
+        $testimonialsCount = $testimonials->count();
+        $messagesCount = messages::count();
+        $servicesCount = services::count();
+
+        return view('Admin.pages.dashboard', compact('title', 'projects', 'testimonials', 'services', 'FAQs','servicesCount', 'projectsCount', 'testimonialsCount', 'messagesCount'));
+    }
+
+    // profile form page
+    public function profile()
+    {
+        $title = 'Profile';
+        return view('Admin.pages.profile', compact('title'));
     }
 
     // login admin
@@ -96,29 +123,5 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    // dashboard
-    public function dashboard(projects $projects, news $news, Testimonial $testimonials)
-    {
-        $title = 'Admin Dashboard';
-        // get all data from database
-        $projects = projects::all();
-        $news = news::all();
-        $testimonials = Testimonial::all();
-        // count items
-        $projectsCount = $projects->count();
-        $newsCount = $news->count();
-        $testimonialsCount = $testimonials->count();
-        $messagesCount = messages::count();
-
-        return view('Admin.pages.dashboard', compact('title', 'projects', 'news', 'testimonials', 'projectsCount', 'newsCount', 'testimonialsCount', 'messagesCount'));
-    }
-
-    // profile form page
-    public function profile()
-    {
-        $title = 'Profile';
-        return view('Admin.pages.profile', compact('title'));
     }
 }

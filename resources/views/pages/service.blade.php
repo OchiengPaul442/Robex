@@ -27,81 +27,22 @@
     <div class="wrapper">
         {{-- header section --}}
         @include('layouts.site.head')
-        <div class="main-service-con">
-            <div class="d-flex justtify-content-between gap-3 selected-service">
-                <div class="service-img-det">
-                    <img src="{{ asset('img/construct-1.jpg') }}" width="100%;" alt="">
+        <div class="container">
+            <div class="service-category" id="industry-section">
+                <input type="hidden" value="{{ $service->id }}">
+                <div>
+                    <img src="{{ asset('assets/images/'.$service->image) }}" width="100%" height="450px" alt="">
                 </div>
-                <div class="p-4 service-about-det">
-                    <h1>Service Name</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dicta delectus reiciendis
-                        aliquam
-                        dolore modi possimus vero iusto quod natus accusantium, molestiae asperiores tempore qui earum.
-                        Quibusdam omnis hic quia.
-                    </p>
+                <div class="p-4" style="width:100%;">
+                    <h1>{{ $service->name }}</h1>
+                    <ul>
+                        {{ $service->details }}
+                    </ul>
                 </div>
-            </div>
-            {{-- Services section --}}
-            <section id="services">
-                <div class="service wow fadeInUp">
-                    <div class="">
-                        <div class="section-header text-center">
-                            <p>Other Services</p>
-                            <h2>Include</h2>
-                        </div>
-                        <div class="row d-flex gap-4 justify-content-around flex-wrap">
-                            <div class="service-card Service-1">
-                                <div class="service-card-content">
-                                    <h2 class="service-card-title">INDUSTRIAL INSTALLATIONS</h2>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, dolore laudantium
-                                        possimus,
-                                        ad
-                                        iure at magnam temporibus natus quisquam perspiciatis ipsum.</p>
-                                    <a href="{{ route('service') }}" class="serivce-button">Learn More</a>
-                                </div>
-                            </div>
-                            <div class="service-card Service-2">
-                                <div class="service-card-content">
-                                    <h2 class="service-card-title">GENERAL
-                                        SUPPLIES</h2>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, dolore laudantium
-                                        possimus,
-                                        ad
-                                        iure at magnam temporibus natus quisquam perspiciatis ipsum.</p>
-                                    <a href="{{ route('service') }}" class="serivce-button">Learn More</a>
-                                </div>
-                            </div>
-                            <div class="service-card Service-3">
-                                <div class="service-card-content">
-                                    <h2 class="service-card-title">ENGINEERING SERVICES</h2>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, dolore laudantium
-                                        possimus,
-                                        ad
-                                        iure at magnam temporibus natus quisquam perspiciatis ipsum.</p>
-                                    <a href="{{ route('service') }}" class="serivce-button">Learn More</a>
-                                </div>
-                            </div>
-                            <div class="service-card Service-4">
-                                <div class="service-card-content">
-                                    <h2 class="service-card-title">OIL & GAS</h2>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, dolore laudantium
-                                        possimus,
-                                        ad
-                                        iure at magnam temporibus natus quisquam perspiciatis ipsum.</p>
-                                    <a href="{{ route('service') }}" class="serivce-button">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            {{-- end of services section --}}
-
+            </div>         
         </div>
         {{-- footer section --}}
         @include('layouts.site.foot')
-
         @include('components.Button.scrolltotop')
     </div>
     {{-- loader --}}

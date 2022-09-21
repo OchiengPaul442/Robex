@@ -17,7 +17,7 @@
                             <a href="#portfolio" class="nav-item nav-link">Project</a>
                             <a href="#FAQs" class="nav-item nav-link">FAQs</a>
                             <a href="#contact" id="contact-btn-nav-1" class="nav-item nav-link">Contact</a>
-                            <a href="#partners" class="nav-item nav-link">Our Partners</a>
+                            <a href="#partners" class="nav-item nav-link">Partners</a>
                         </ul>
                         <a href="#contact" id="contact-btn-nav-2" class="nav-item nav-link">
                             <button type="button" class="btn btn-outline-warning">Contact Us</button>

@@ -18,6 +18,10 @@
     font-family: "Inter", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--main-theme-text);
     background: var(--main-theme);
@@ -53,6 +57,7 @@ a:focus {
 .wrapper {
     position: relative;
     width: 100%;
+    height: auto;
     max-width: 1600px;
     margin: 0 auto;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -888,7 +893,7 @@ section {
 }
 
 .about .about-text p {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* <<< more About Section >>> */
@@ -1722,6 +1727,7 @@ section {
     background-size: cover;
     padding: 10rem 0 0;
     max-width: 35ch;
+    height: 330px;
     border-radius: 0.5rem;
     overflow: hidden;
     transition: transform 500ms ease;
@@ -1729,20 +1735,12 @@ section {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
 }
 
-.Service-1 {
-    background-image: url("../img/industry.jpg");
-}
-
-.Service-2 {
-    background-image: url("../img/supplies.jpg");
-}
-
-.Service-3 {
-    background-image: url("../img/engineering.jpg");
-}
-
-.Service-4 {
-    background-image: url("../img/oiland\ gas.jpg");
+.service-card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .service-card:hover {
@@ -1757,9 +1755,8 @@ section {
         rgba(4, 24, 51, 0.6),
         rgba(3, 38, 90, 0.7)
     );
-    color: white;
-    transition: 500ms ease;
-    transition-delay: 600ms;
+    height: 100%;
+    transform: translateY(36%);
 }
 
 .service-card:hover .service-card-content {
@@ -1775,7 +1772,7 @@ section {
 }
 
 .service-card-content h2 {
-    color: var(--theme-color-2);
+    color: white;
     font-size: 1.2rem;
 }
 
@@ -1806,9 +1803,11 @@ section {
     display: inline-block;
     text-decoration: none;
     color: white;
+    opacity: 1;
     background: var(--theme-color-2);
     padding: 0.5em 1.25em;
     border-radius: 0.25em;
+    margin-top: 5px;
 }
 
 .serivce-button:hover,
@@ -1816,33 +1815,18 @@ section {
     background-color: var(--theme-color-1);
 }
 
-.ser-con {
-    width: 100%;
-    height: 100vh;
-}
-
-.main-service-con {
-    padding-bottom: 100px;
-}
-
-.selected-service {
-    display: flex;
-    justify-content: space-between;
-}
-
 @media (hover) {
     .service-card-content {
-        transform: translateY(75%);
+        transform: translateY(65%);
         transition: transform 500ms ease;
     }
-
     .service-card-content > *:not(.service-card-title) {
         opacity: 0;
         transition: opacity 500ms linear;
     }
     .service-card:hover .service-card-content,
     .service-card:focus-within .service-card-content {
-        transform: translateY(0);
+        transform: translateY(35%);
         transition-delay: 500ms;
     }
 
@@ -1879,19 +1863,134 @@ section {
     .main-service-con {
         padding: 10px;
     }
-    .selected-service {
-        display: block;
-        flex-direction: column;
-    }
-    .service-img-det img {
-        width: 100%;
-        height: auto;
-    }
-    .service-about-det {
-        width: 100%;
-    }
+}
+
+.ser-con {
+    width: 100%;
+    height: 100vh;
+}
+
+.main-service-con {
+    padding-bottom: 100px;
+    /* height: 100vh; */
+}
+
+.service-about-det {
+    width: 100%;
+    position: relative;
+}
+
+.service-img-det {
+    width: 100%;
+    height: 300px;
+    position: relative;
 }
 
 .service-img-det img {
-    border-bottom-right-radius: 30px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*******************************/
+/********* partners CSS **********/
+/*******************************/
+#partners {
+    width: 100%;
+    background-color: white;
+    padding: 150px 0;
+}
+
+/*******************************/
+/********* timeline CSS **********/
+/*******************************/
+.timeline-head {
+    margin-top: -146px;
+    background: var(--text-color-lg);
+    padding: 20px;
+    color: var(--text-color-sm);
+}
+
+.timeline-head h1{
+    color: var(--text-color-sm);
+}
+
+.timeline-social{
+    background-color: var(--text-color-lg);
+}
+
+.timeline-social a{
+    background-color: var(--theme-color-2);
+}
+
+.timeline-text{
+    background-color: var(--text-color-lg);
+}
+
+.timeline-text h5{
+    color: var(--theme-color-2);
+}
+.timeline .timeline-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.timeline:hover .timeline-img {
+    left: 75px;
+}
+
+.timeline .timeline-social {
+    position: absolute;
+    width: 75px;
+    top: 0;
+    bottom: 0;
+    left: -75px;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.timeline:hover .timeline-social {
+    left: 0;
+}
+
+.owl-carousel .owl-nav {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 50%;
+    left: 0;
+    margin-top: -20px;
+    padding: 0 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color-lg);
+    background: var(--text-color-sm);
+    border-radius: 40px;
+    font-size: 22px;
+    opacity: 0.1;
+    transition: 0.3s;
+}
+
+.owl-carousel:hover .owl-nav .owl-prev,
+.owl-carousel:hover .owl-nav .owl-next {
+    opacity: 1;
 }

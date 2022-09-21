@@ -27,7 +27,9 @@
             </a>
             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="{{ route('news.create') }}">News
+                    <a class="nav-link" href="{{ route('service.create') }}">Services
+                    </a>
+                    <a class="nav-link" href="{{ route('FAQs.create') }}">FAQs
                     </a>
                     <a class="nav-link" href="{{ route('projects.create') }}">Projects</a>
                     <a class="nav-link" href="{{ route('testimonial.create') }}">Testimonials</a>

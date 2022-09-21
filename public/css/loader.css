@@ -11,13 +11,13 @@
     position: relative;
     left: 50%;
     top: 50%;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #3498db;
-
+    
     -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 
@@ -140,4 +140,50 @@
 }
 .no-js h1 {
     color: #023047;
+}
+
+.con-spin {
+    position: fixed;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: auto;
+    height: auto;
+}
+
+
+.innerpoint {
+    position: absolute;
+    z-index: 3000;
+    left: 69%;
+    top: 24%;
+    transform: translate(-50%, -50%);    
+}
+
+.innerpoint img {
+    background: #023047;
+    width: 96px;    
+    -webkit-animation: scale 1s ease-in-out infinite alternate;
+    animation: scale 1s ease-in-out infinite alternate;
+    border-radius: 100%;
+}
+
+
+@-webkit-keyframes scale {
+    0% {
+        -webkit-transform: scale(0.6);
+    }
+    100% {
+        -webkit-transform: scale(0.8);
+    }
+}
+
+@keyframes scale {
+    0% {
+        -webkit-transform: scale(0.6);
+    }
+    100% {
+        -webkit-transform: scale(0.8);
+    }
 }

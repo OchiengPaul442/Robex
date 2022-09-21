@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FAQs;
 use Illuminate\Http\Request;
 use App\Models\projects;
-use App\Models\news;
+use App\Models\services;
 use App\Models\Testimonial;
 
 
@@ -13,11 +14,12 @@ class AppController extends Controller
     // home page
     public function index()
     {
-        $title = 'Robex-co';
-        // $projects = projects::all();
-        // $news = news::all();
-        // $testimonials = Testimonial::all();
-        return view('layouts.site.index', compact('title'));
+        $title = 'Cube Engineering';
+        $projects = projects::all();
+        $testimonials = Testimonial::all();
+        $services = services::all();
+        $FAQs = FAQs::all();
+        return view('layouts.site.index', compact('title', 'projects', 'testimonials', 'services', 'FAQs'));
     }
     // index page
     public function welcome()
@@ -38,21 +40,5 @@ class AppController extends Controller
         $title = 'Privacy Page';
         $heading = 'Privacy';
         return view('pages.policies.privacy',compact('heading','title'));
-    }
-
-    // service page
-    public function service()
-    {
-        $title = 'Service Page';
-        $heading = 'Service';
-        return view('pages.service',compact('heading','title'));
-    }
-
-    // news page
-    public function news()
-    {
-        $title = 'News Page';
-        $heading = 'News';
-        return view('pages.news',compact('heading','title'));
     }
 }

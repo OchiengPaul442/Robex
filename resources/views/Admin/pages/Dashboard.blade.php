@@ -32,9 +32,9 @@
             </div>
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-warning text-white mb-4">
-                    <div class="card-body fs-5 text-black">Articles</div>
+                    <div class="card-body fs-5 text-black">Services</div>
                     <h2 class="d-flex justify-content-end p-2">
-                        {{ $newsCount }}</h2>
+                    {{ $servicesCount }}</h2>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="#">View Details</a>
                         <div class="small text-white">
@@ -123,47 +123,94 @@
                 </table>
             </div>
         </div>
-        {{-- news section --}}
+        {{-- Service section --}}
         <div class="card mb-4">
             <div class="card-header">
                 <x-carbon-column-dependency style="width: 20px;margin-right:10px" />
-                News DataTable
+                Services DataTable
             </div>
             <div class="card-body">
-                <table id="newsTable">
+                <table id="servicesTable">
                     <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Author</th>
-                            <th>Description</th>
-                            <th>Article</th>
+                            <th>Service name</th>
+                            <th>Brief Description</th>
+                            <th>Details</th>
+                            <th>Image</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>Title</th>
-                            <th>Author</th>
-                            <th>Description</th>
-                            <th>Article</th>
+                            <th>Service name</th>
+                            <th>Brief Description</th>
+                            <th>Details</th>
+                            <th>Image</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>
                     <tbody>
-                        {{-- display --}}
-                        @foreach ($news as $new)
+                        {{-- display all projects --}}
+                        @foreach ($services as $service)
                             <tr>
-                                <td>{{ $new->newstitle }}</td>
-                                <td>{{ $new->authorsname }}</td>
+                                <td>{{ $service->name }}</td>
                                 <td>
-                                    {{ Str::limit($new->briefdescription, 40) }}
+                                    {{ Str::limit($service->description, 40) }}
+                                </td>
+                                <td>{{ Str::limit($service->details, 40) }}</td>
+                                <td>
+                                    {{ $service->image }}
                                 </td>
                                 <td>
-                                    {{ Str::limit($new->newsarticle, 40) }}
+                                    <a href="{{ route('service.edit', $service->id) }}"
+                                        class="btn btn-primary btn-sm">Edit</a>
+                                    <form action="{{ route('service.destroy', $service->id) }}" method="POST"
+                                        style="display: inline-block">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                    </form>
                                 </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {{-- FAQs section --}}
+        <div class="card mb-4">
+            <div class="card-header">
+                <x-carbon-column-dependency style="width: 20px;margin-right:10px" />
+                FAQs DataTable
+            </div>
+            <div class="card-body">
+                <table id="FAQsTable">
+                    <thead>
+                        <tr>
+                            <th>Question</th>
+                            <th>Answer</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Question</th>
+                            <th>Answer</th>
+                            <th>Action</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        {{-- display all projects --}}
+                        @foreach ($FAQs as $FAQ)
+                            <tr>
+                                <td>{{ $FAQ->question }}</td>
                                 <td>
-                                    <a href="{{ route('news.edit', $new->id) }}" class="btn btn-primary btn-sm">Edit</a>
-                                    <form action="{{ route('news.destroy', $new->id) }}" method="POST"
+                                    {{ Str::limit($FAQ->answer, 40) }}
+                                </td>                                
+                                <td>
+                                    <a href="{{ route('service.edit', $FAQ->id) }}"
+                                        class="btn btn-primary btn-sm">Edit</a>
+                                    <form action="{{ route('service.destroy', $FAQ->id) }}" method="POST"
                                         style="display: inline-block">
                                         @csrf
                                         @method('DELETE')

@@ -40,7 +40,7 @@ class TestimonialController extends Controller
         $request->validate([
             'name' => 'required|max:55',
             'occupation' => 'required|max:255',
-            'comments' => 'required|max:255',
+            'comments' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
@@ -49,15 +49,15 @@ class TestimonialController extends Controller
         $request->image->move(public_path('/assets/images'), $imageName);
 
         // creating new object for news
-        $news = new Testimonial;
+        $testimonial = new Testimonial;
 
         // saving the news data in database
-        $news->customername = $request->name;
-        $news->occupation = $request->occupation;
-        $news->comments = $request->comments;
-        $news->profileimage = $imageName;
+        $testimonial->customername = $request->name;
+        $testimonial->occupation = $request->occupation;
+        $testimonial->comments = $request->comments;
+        $testimonial->profileimage = $imageName;
 
-        $result = $news->save();
+        $result = $testimonial->save();
 
         // error checks
         if ($result) {

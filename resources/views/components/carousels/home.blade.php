@@ -12,8 +12,8 @@
         <div class="carousel-item">
             <img src="{{ asset('img/carousel2.jpg') }}" class="d-block w-100" alt="">
             <div class="carousel-caption">
-                <p class="animated fadeInRight">Professional Builder</p>
-                <h1 class="animated fadeInLeft">We Build Your Home</h1>
+                <p class="animated fadeInRight">Professional innovators</p>
+                <h1 class="animated fadeInLeft">We bring your innovation to life</h1>
                 <a class="btn animated fadeInUp" href="#about">Find out More</a>
             </div>
         </div>

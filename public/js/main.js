@@ -1,4 +1,14 @@
 $(document).ready(function () {
+    $(".innerpoint").show();
+
+    $(window).scrollTop(0);
+    // Complete page is fully loaded, including all frames, objects and images
+    setTimeout(function () {
+        $("body").addClass("loaded");
+        $(".innerpoint").hide();
+        // scroll to top once loaded
+    }, 4500);
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -94,10 +104,39 @@ $(document).ready(function () {
         });
     });
 
-    // Complete page is fully loaded, including all frames, objects and images
-    setTimeout(function () {
-        $("body").addClass("loaded");
-        // scroll to top once loaded
-        $(window).scrollTop(0);
-    }, 3000);
+    // timeline section
+    $(".timeline-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1500,
+        margin: 30,
+        dots: false,
+        loop: true,
+        nav: true,
+        navText: [
+            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>',
+        ],
+        responsive: {
+            0: {
+                items: 1,
+            },
+            576: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            },
+            992: {
+                items: 3,
+            },
+        },
+    });
+
+    // Testimonials carousel
+    $(".timeline-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        items: 1,
+        loop: true,
+    });
 });

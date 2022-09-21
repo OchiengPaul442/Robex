@@ -55,7 +55,7 @@
 </section>
 {{-- navbar section --}}
 {{-- if the request is pricvacy then display other navbar --}}
-@if (Request::is('privacy','service','details') || Request::is('terms'))
+@if (Request::is('privacy','service/*','details') || Request::is('terms'))
     @include('layouts.site.navbar2')
 @else
     @include('layouts.site.navbar')

@@ -90,7 +90,8 @@
                         </div>
                         <div class="col-lg-7 col-md-6">
                             <div class="section-header text-left">
-                                <h2>Welcome to Cube Engineering</h2>
+                                <h2 class="fw-bold">Cube Engineering</h2>
+                                <small>SERVE YOU BETTER</small>
                                 <div class="Line mt-4 mb-4"></div>
                                 <p>About Us</p>
                             </div>
@@ -121,7 +122,7 @@
             {{-- Begin About Section --}}
             <div class="About_sec wow fadeInUp" id="about" data-wow-delay="0.2s">
                 <div class="Center">
-                    <h2>More about us</h2>
+                    <h3>More about us</h3>
                     <div class="Line mt-4"></div>
                     {{-- Begin Tab side --}}
                     <div class="Tabside">
@@ -209,7 +210,7 @@
                                         <i class="flaticon-worker"></i>
                                     </div>
                                     <div class="fact-text">
-                                        <h2 data-toggle="counter-up">100</h2>
+                                        <h2 data-toggle="counter-up">16</h2>
                                         <p>Expert Workers</p>
                                     </div>
                                 </div>
@@ -218,7 +219,7 @@
                                         <i class="flaticon-building"></i>
                                     </div>
                                     <div class="fact-text">
-                                        <h2 data-toggle="counter-up">50</h2>
+                                        <h2 data-toggle="counter-up">29</h2>
                                         <p>Happy Clients</p>
                                     </div>
                                 </div>
@@ -231,7 +232,7 @@
                                         <i class="flaticon-address"></i>
                                     </div>
                                     <div class="fact-text">
-                                        <h2 data-toggle="counter-up">20</h2>
+                                        <h2 data-toggle="counter-up">29</h2>
                                         <p>Completed Projects</p>
                                     </div>
                                 </div>
@@ -240,7 +241,9 @@
                                         <i class="flaticon-crane"></i>
                                     </div>
                                     <div class="fact-text">
-                                        <h2 data-toggle="counter-up">10</h2>
+                                        <span class="d-flex gap-2">
+                                            <h2 data-toggle="counter-up">10</h2><span class="fs-3">+</span>
+                                        </span>
                                         <p>Running Projects</p>
                                     </div>
                                 </div>
@@ -255,52 +258,49 @@
         {{-- Services section --}}
         <section id="services">
             <div class="service wow fadeInUp">
-                <div class="">
-                    <div class="section-header text-center">
-                        <p>Our Services</p>
-                        <h2>Services We Provide</h2>
+                <div class="section-header text-center">
+                    <p>Our Services</p>
+                    <h2>Services We Provide</h2>
+                </div>
+                <div class="row d-flex gap-4 justify-content-around flex-wrap">
+                    {{-- @foreach ($services as $service)
+                        <div class="service-card">
+                            <input type="hidden" value="{{ $service->id }}">
+                            <img src="{{ asset('assets/images/' . $service->image) }}" alt="">
+                            <div class="service-card-content">
+                                <h2 class="service-card-title">{{ $service->name }}</h2>
+                                <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
+                                    More</a>
+                            </div>
+                        </div>
+                    @endforeach --}}
+                    <div class="service-card">
+                        <img src="{{ asset('img/industry.jpg') }}" alt="">
+                        <div class="service-card-content">
+                            <h2 class="service-card-title">INDUSTRIAL INSTALLATIONS</h2>
+                            <a href="" class="serivce-button">Learn More</a>
+                        </div>
                     </div>
-                    <div class="row d-flex gap-4 justify-content-around flex-wrap">
-                        <div class="service-card Service-1">
-                            <div class="service-card-content">
-                                <h2 class="service-card-title">INDUSTRIAL INSTALLATIONS</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, dolore laudantium
-                                    possimus,
-                                    ad
-                                    iure at magnam temporibus natus quisquam perspiciatis ipsum.</p>
-                                <a href="{{ route('service') }}" class="serivce-button">Learn More</a>
-                            </div>
+                    <div class="service-card">
+                        <img src="{{ asset('img/supplies.jpg') }}" alt="">
+                        <div class="service-card-content">
+                            <h2 class="service-card-title">GENERAL
+                                SUPPLIES</h2>
+                            <a href="" class="serivce-button">Learn More</a>
                         </div>
-                        <div class="service-card Service-2">
-                            <div class="service-card-content">
-                                <h2 class="service-card-title">GENERAL
-                                    SUPPLIES</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, dolore laudantium
-                                    possimus,
-                                    ad
-                                    iure at magnam temporibus natus quisquam perspiciatis ipsum.</p>
-                                <a href="{{ route('service') }}" class="serivce-button">Learn More</a>
-                            </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="{{ asset('img/electrical.jpg') }}" alt="">
+                        <div class="service-card-content">
+                            <h2 class="service-card-title">ENGINEERING SERVICES</h2>
+                            <a href="" class="serivce-button">Learn More</a>
                         </div>
-                        <div class="service-card Service-3">
-                            <div class="service-card-content">
-                                <h2 class="service-card-title">ENGINEERING SERVICES</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, dolore laudantium
-                                    possimus,
-                                    ad
-                                    iure at magnam temporibus natus quisquam perspiciatis ipsum.</p>
-                                <a href="{{ route('service') }}" class="serivce-button">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="service-card Service-4">
-                            <div class="service-card-content">
-                                <h2 class="service-card-title">OIL & GAS</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, dolore laudantium
-                                    possimus,
-                                    ad
-                                    iure at magnam temporibus natus quisquam perspiciatis ipsum.</p>
-                                <a href="{{ route('service') }}" class="serivce-button">Learn More</a>
-                            </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="{{ asset('img/oiland gas.jpg') }}" alt="">
+                        <div class="service-card-content">
+                            <h2 class="service-card-title">OIL & GAS</h2>
+                            <a href="" class="serivce-button">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -311,23 +311,42 @@
         {{-- portfolio section --}}
         <section id="portfolio" class="wow fadeIn">
             <div class="section-header text-center">
-                <p>Our Projects</p>
-                <h2>Visit Our Projects</h2>
+                <p>Projects</p>
+                <h2>Supported projects</h2>
             </div>
             <div class="container-fluid bg-portfolio py-5">
                 <div class="container py-5">
                     <div class="row m-0 portfolio-container">
+                        {{-- @foreach ($projects as $project)
+                            <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="portfolio-img">
+                                        <img class="img-fluid w-100"
+                                            src="{{ asset('assets/images/' . $project->image) }}" alt="">
+                                    </div>
+                                    <div class="portfolio-text">
+                                        <h4 class="font-weight-bold mb-4">{{ $project->projectname }}</h4>
+                                        <div class="d-flex flex-column align-items-center justify-content-center">
+                                            <p>{{ $project->description }}</p>
+                                            </p>
+                                            <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-1.jpg"
+                                                data-lightbox="portfolio">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach --}}
                         <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                             <div class="position-relative overflow-hidden">
                                 <div class="portfolio-img">
                                     <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
                                 </div>
                                 <div class="portfolio-text">
-                                    <h4 class="font-weight-bold mb-4">Project Name</h4>
+                                    <h4 class="font-weight-bold mb-4">Office building</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias
-                                            qui
-                                            totam doloremque, voluptatem, veritatis velit aut temporibus quae fugit.</p>
+                                        <p>Supplied cutting disks and plumbing items need for the completion of the Kings office building in bukoto.</p>
                                         <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-1.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
@@ -342,11 +361,9 @@
                                     <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
                                 </div>
                                 <div class="portfolio-text">
-                                    <h4 class="font-weight-bold mb-4">Project Name</h4>
+                                    <h4 class="font-weight-bold mb-4">Forest Villa</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias
-                                            qui
-                                            totam doloremque, voluptatem, veritatis velit aut temporibus quae fugit.</p>
+                                        <p>Carried out surveys and clearing of land for construction of a forest villa at kidepo national park.</p>
                                         <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-2.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
@@ -361,11 +378,9 @@
                                     <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
                                 </div>
                                 <div class="portfolio-text">
-                                    <h4 class="font-weight-bold mb-4">Project Name</h4>
+                                    <h4 class="font-weight-bold mb-4">Appartment project</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias
-                                            qui
-                                            totam doloremque, voluptatem, veritatis velit aut temporibus quae fugit.</p>
+                                        <p>Supplied lifting belts to the Construction site at old Kampala.</p>
                                         <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-3.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
@@ -380,11 +395,9 @@
                                     <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
                                 </div>
                                 <div class="portfolio-text">
-                                    <h4 class="font-weight-bold mb-4">Project Name</h4>
+                                    <h4 class="font-weight-bold mb-4">Housing Project</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias
-                                            qui
-                                            totam doloremque, voluptatem, veritatis velit aut temporibus quae fugit.</p>
+                                        <p>Supplied bearings for the construction of this lovely home at Entebbe</p>
                                         <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-4.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
@@ -399,11 +412,9 @@
                                     <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
                                 </div>
                                 <div class="portfolio-text">
-                                    <h4 class="font-weight-bold mb-4">Project Name</h4>
+                                    <h4 class="font-weight-bold mb-4">Housing Project</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias
-                                            qui
-                                            totam doloremque, voluptatem, veritatis velit aut temporibus quae fugit.</p>
+                                        <p>Supplied a number of solar warning lights to this lovely home located at Birongo off the express high way.</p>
                                         <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-5.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
@@ -418,11 +429,9 @@
                                     <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
                                 </div>
                                 <div class="portfolio-text">
-                                    <h4 class="font-weight-bold mb-4">Project Name</h4>
+                                    <h4 class="font-weight-bold mb-4">Mirembe Villas</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias
-                                            qui
-                                            totam doloremque, voluptatem, veritatis velit aut temporibus quae fugit.</p>
+                                        <p>Supplied electrical spares to Mirembe villas for the bedraggled tractor.</p>
                                         <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-6.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
@@ -635,6 +644,11 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="testimonial-slider-nav">
+                                {{-- @foreach ($testimonials as $testimonial)
+                                    <div class="slider-nav"><img src="{{ asset('assets/images/'.$testimonial->profileimage) }}"
+                                            alt="Testimonial">
+                                    </div>
+                                @endforeach --}}
                                 <div class="slider-nav"><img src="{{ asset('img/pro1.jpg') }}" alt="Testimonial">
                                 </div>
                                 <div class="slider-nav"><img src="{{ asset('img/pro2.jpg') }}" alt="Testimonial">
@@ -657,84 +671,72 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="testimonial-slider">
+                                {{-- @foreach ($testimonials as $testimonial)
+                                    <div class="slider-item">
+                                        <h3>{{ $testimonial->customername }}</h3>
+                                        <h4>{{ $testimonial->occupation }}</h4>
+                                        <p>{{ $testimonial->comments }}
+                                        </p>
+                                    </div>
+                                @endforeach --}}
                                 <div class="slider-item">
                                     <h3>John Doe</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium
-                                        mi.
-                                        Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id
-                                        gravida
-                                        condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
+                                    <h4>Business owner</h4>
+                                    <p>Cube Engineering is prompt to responding to their client’s requests, especially
+                                        during time-crunching situations.
                                     </p>
                                 </div>
                                 <div class="slider-item">
                                     <h3>Derrick Marques</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium
-                                        mi.
-                                        Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id
-                                        gravida
-                                        condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
+                                    <h4>Civil Engineer</h4>
+                                    <p>From the beginning, Cube Engineering has been a good partner to work with. They
+                                        have committed the resources, the time and the talent to make the relationship a
+                                        win-win. They have been committed to serving our needs and to improving the
+                                        quality and scope of their expertise.
                                     </p>
                                 </div>
                                 <div class="slider-item">
                                     <h3>Stella kyankyu</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium
-                                        mi.
-                                        Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id
-                                        gravida
-                                        condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
+                                    <h4>Head teacher</h4>
+                                    <p>Cube Engineering has been a tremendous resource for our engineering department.
+                                        They are very precise and attentive to all our needs and have been able to learn
+                                        our procedures quicker than I ever thought possible.
                                     </p>
                                 </div>
                                 <div class="slider-item">
                                     <h3>Grace Kansiime</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium
-                                        mi.
-                                        Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id
-                                        gravida
-                                        condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
+                                    <h4>Human Resource Manager</h4>
+                                    <p>Great Job by the Outsource2india Team! Up to our standards!
                                     </p>
                                 </div>
                                 <div class="slider-item">
                                     <h3>John Doe</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium
-                                        mi.
-                                        Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id
-                                        gravida
-                                        condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
+                                    <h4>Business owner</h4>
+                                    <p>Cube Engineering is prompt to responding to their client’s requests, especially
+                                        during time-crunching situations.
                                     </p>
                                 </div>
                                 <div class="slider-item">
                                     <h3>Derrick Marques</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium
-                                        mi.
-                                        Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id
-                                        gravida
-                                        condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
+                                    <h4>Civil Engineer</h4>
+                                    <p>From the beginning, Cube Engineering has been a good partner to work with. They
+                                        have committed the resources, the time and the talent to make the relationship a
+                                        win-win. They have been committed to serving our needs and to improving the
+                                        quality and scope of their expertise
                                     </p>
                                 </div>
                                 <div class="slider-item">
                                     <h3>Stella kyankyu</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium
-                                        mi.
-                                        Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id
-                                        gravida
-                                        condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
+                                    <h4>Head teacher</h4>
+                                    <p>Cube Engineering has been a tremendous resource for our engineering department.
+                                        They are very precise and attentive to all our needs and have been able to learn
+                                        our procedures quicker than I ever thought possible.
                                     </p>
                                 </div>
                                 <div class="slider-item">
                                     <h3>Grace Kansiime</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium
-                                        mi.
-                                        Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id
-                                        gravida
-                                        condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
+                                    <h4>Human Resource Manager</h4>
+                                    <p>Great Job by the Outsource2india Team! Up to our standards!
                                     </p>
                                 </div>
                             </div>
@@ -744,92 +746,6 @@
             </div>
         </section>
         {{-- end of testimonial section --}}
-
-        {{-- news section --}}
-        {{-- <section id="news">
-            <!-- new Start -->
-            <div class="blog">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Latest News</p>
-                        <h2>From Cube Engineering</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 wow fadeInUp">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <a href="{{ route('newsDetails') }}">
-                                        <img src="{{ asset('assets/images/1663349810.testimonials.jpg') }}" alt="Image">
-                                    </a>
-                                </div>
-                                <div class="blog-title">
-                                    <h3>New buildings</h3>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">John Doe</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ea reprehenderit
-                                        recusandae, excepturi laboriosam tempora, quas blanditiis similique corporis omnis
-                                        cumque.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <a href="{{ route('newsDetails') }}">
-                                        <img src="{{ asset('assets/images/1663349810.testimonials.jpg') }}" alt="Image">
-                                    </a>
-                                </div>
-                                <div class="blog-title">
-                                    <h3>New buildings</h3>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">John Doe</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ea reprehenderit
-                                        recusandae, excepturi laboriosam tempora, quas blanditiis similique corporis omnis
-                                        cumque.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <a href="{{ route('newsDetails') }}">
-                                        <img src="{{ asset('assets/images/1663349810.testimonials.jpg') }}" alt="Image">
-                                    </a>
-                                </div>
-                                <div class="blog-title">
-                                    <h3>New buildings</h3>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">John Doe</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ea reprehenderit
-                                        recusandae, excepturi laboriosam tempora, quas blanditiis similique corporis omnis
-                                        cumque.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- new End -->
-        </section> --}}
-        {{-- end of news section --}}
 
         {{-- contact section --}}
         <section id="contact">
@@ -922,6 +838,142 @@
             </div>
         </section>
         {{-- end of partners section --}}
+
+        {{-- TIMELINE --}}
+        <section id="timeline">
+            <div class="container-fluid py-5">
+                <div class="container py-5">
+                    <div class="row align-items-end mb-4 timeline-head">
+                        <div class="col-lg-6">
+                            <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Daily Reminder</h6>
+                            <h1 class="section-title mb-3">Always Deliver more than expected.</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="owl-carousel timeline-carousel position-relative">
+                                <div class="timeline d-flex flex-column text-center rounded overflow-hidden">
+                                    <div class="position-relative">
+                                        <div class="timeline-img">
+                                            <img class="img-fluid w-100" src="{{ asset('img/augst 002.jpg') }}" alt="">
+                                        </div>
+                                        <div
+                                            class="timeline-social d-flex flex-column align-items-center justify-content-center">
+                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-secondary btn-social" href="#"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column timeline-text text-center py-4">
+                                        <h5 class="font-weight-bold">Full Name</h5>
+                                    </div>
+                                </div>
+                                <div class="timeline d-flex flex-column text-center rounded overflow-hidden">
+                                    <div class="position-relative">
+                                        <div class="timeline-img">
+                                            <img class="img-fluid w-100" src="{{ asset('img/augst 003(1).jpg') }}" alt="">
+                                        </div>
+                                        <div
+                                            class="timeline-social d-flex flex-column align-items-center justify-content-center">
+                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-secondary btn-social" href="#"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column timeline-text text-center py-4">
+                                        <h5 class="font-weight-bold">Full Name</h5>
+                                    </div>
+                                </div>
+                                <div class="timeline d-flex flex-column text-center rounded overflow-hidden">
+                                    <div class="position-relative">
+                                        <div class="timeline-img">
+                                            <img class="img-fluid w-100" src="{{ asset('img/new1.jpeg') }}" alt="">
+                                        </div>
+                                        <div
+                                            class="timeline-social d-flex flex-column align-items-center justify-content-center">
+                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-secondary btn-social" href="#"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column timeline-text text-center py-4">
+                                        <h5 class="font-weight-bold">Full Name</h5>
+                                    </div>
+                                </div>
+                                <div class="timeline d-flex flex-column text-center rounded overflow-hidden">
+                                    <div class="position-relative">
+                                        <div class="timeline-img">
+                                            <img class="img-fluid w-100" src="{{ asset('img/sept03.jpg') }}" alt="">
+                                        </div>
+                                        <div
+                                            class="timeline-social d-flex flex-column align-items-center justify-content-center">
+                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-secondary btn-social" href="#"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column timeline-text text-center py-4">
+                                        <h5 class="font-weight-bold">Full Name</h5>
+                                    </div>
+                                </div>
+                                <div class="timeline d-flex flex-column text-center rounded overflow-hidden">
+                                    <div class="position-relative">
+                                        <div class="timeline-img">
+                                            <img class="img-fluid w-100" src="{{ asset('img/new2.jpeg') }}" alt="">
+                                        </div>
+                                        <div
+                                            class="timeline-social d-flex flex-column align-items-center justify-content-center">
+                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-secondary btn-social" href="#"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column timeline-text text-center py-4">
+                                        <h5 class="font-weight-bold">Full Name</h5>
+                                    </div>
+                                </div>
+                                <div class="timeline d-flex flex-column text-center rounded overflow-hidden">
+                                    <div class="position-relative">
+                                        <div class="timeline-img">
+                                            <img class="img-fluid w-100" src="{{ asset('img/SEPT 02.jpg') }}" alt="">
+                                        </div>
+                                        <div
+                                            class="timeline-social d-flex flex-column align-items-center justify-content-center">
+                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-secondary btn-social" href="#"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column timeline-text text-center py-4">
+                                        <h5 class="font-weight-bold">Full Name</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        {{-- END OF TIMELINE --}}
 
         {{-- google maps to business --}}
         <section>

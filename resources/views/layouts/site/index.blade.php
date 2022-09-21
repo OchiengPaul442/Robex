@@ -12,8 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     {{-- main css --}}
     {{-- <link rel="stylesheet" href="{{ asset('/css/loader.css') }}" type="text/css"> --}}
-    <link rel="stylesheet" href="{{ asset('/css/style.css') }}" type="text/css">
-    {{-- <link rel="stylesheet" href="{{ asset('css/style.min.css') }}" type="text/css"> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('/css/style.css') }}" type="text/css"> --}}
+    <link rel="stylesheet" href="{{ asset('/css/style.min.css') }}" type="text/css">
     {{-- lib css --}}
     <link rel="stylesheet" href="{{ asset('/lib/flaticon/font/flaticon.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('/lib/animate/animate.min.css') }}" type="text/css">

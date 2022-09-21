@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('customername');
             $table->string('occupation');
-            $table->string('comments');
+            $table->longText('comments');
             $table->string('profileimage');
             $table->timestamps();
         });

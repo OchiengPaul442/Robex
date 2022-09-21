@@ -566,7 +566,7 @@
                         <div class="col-md-6">
                             <div id="accordion-2">
                                 @foreach ($FAQs->slice(5,10) as $FAQ)
-                                    <div class="card wow fadeInLeft" data-wow-delay="0.{{ $FAQ->id }}s">
+                                    <div class="card wow fadeInRight" data-wow-delay="0.{{ $FAQ->id }}s">
                                         <div class="card-header">
                                             <a class="card-link collapsed" data-toggle="collapse"
                                                 href="#collapse{{ $FAQ->id }}">
@@ -715,7 +715,7 @@
                                     </div>
                                 @endforeach
                                 {{-- <div class="slider-item">
-                                    <h3>John Doe</h3>
+                                    <h3>John Okema</h3>
                                     <h4>Business owner</h4>
                                     <p>Cube Engineering is prompt to responding to their client’s requests, especially
                                         during time-crunching situations.
@@ -1037,7 +1037,7 @@
     @include('components.loaders.main')
     {{-- js links --}}
     <script src="{{ asset('/js/main.js') }}"></script>
-    <script src="{{ asset('js/validations.js') }}"></script>
+    {{-- <script src="{{ asset('js/validations.js') }}"></script> --}}
     <script src="{{ asset('/lib/easing/easing.min.js') }}"></script>
     <script src="{{ asset('/lib/wow/wow.min.js') }}"></script>
     <script src="{{ asset('/lib/owlcarousel/owl.carousel.min.js') }}"></script>

@@ -8,7 +8,7 @@
     {{-- favicon --}}
 
     <link rel="shortcut icon" href="{{ asset('img/logo-black.png') }}" type="image/x-icon">
-     {{-- main css --}}
+    {{-- main css --}}
     <link rel="stylesheet" href="{{ asset('css/loader.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     {{-- lib css --}}
@@ -39,12 +39,8 @@
         @include('layouts.site.head')
         {{-- main content --}}
         <div class="main_content">
-            <div class="section-header text-center">
-                <p>Privacy</p>
-                <h2>Company Privacy terms</h2>
-            </div>
             <h1>Privacy Policy</h1>
-            <p>Last updated: September 10, 2022</p>
+            <p>Last updated: September 21, 2022</p>
             <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your
                 information when You use the Service and tells You about Your privacy rights and how the law protects
                 You.</p>
@@ -66,8 +62,8 @@
                 </li>
                 <li>
                     <p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;,
-                        &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to Robex-co, 123 Street, Kampala,
-                        Uganda.</p>
+                        &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to Cube Engineering, Blue Heights,
+                        Level 3 Nkrumah Rd.</p>
                 </li>
                 <li>
                     <p><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any
@@ -100,9 +96,9 @@
                         visit).</p>
                 </li>
                 <li>
-                    <p><strong>Website</strong> refers to Robex-co, accessible from <a
-                            href="https://robex-co.herokuapp.com/" rel="external nofollow noopener"
-                            target="_blank">https://robex-co.herokuapp.com/</a></p>
+                    <p><strong>Website</strong> refers to Cube Engineering, accessible from <a
+                            href="http://robex-co.herokuapp.com/" rel="external nofollow noopener"
+                            target="_blank">http://robex-co.herokuapp.com/</a></p>
                 </li>
                 <li>
                     <p><strong>You</strong> means the individual accessing or using the Service, or the company, or
@@ -147,15 +143,6 @@
                     instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if
                     You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have
                     adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>
-                <li><strong>Flash Cookies.</strong> Certain features of our Service may use local stored objects (or
-                    Flash Cookies) to collect and store information about Your preferences or Your activity on our
-                    Service. Flash Cookies are not managed by the same browser settings as those used for Browser
-                    Cookies. For more information on how You can delete Flash Cookies, please read &quot;Where can I
-                    change the settings for disabling, or deleting local shared objects?&quot; available at <a
-                        href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_"
-                        rel="external nofollow noopener"
-                        target="_blank">https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_</a>
-                </li>
                 <li><strong>Web Beacons.</strong> Certain sections of our Service and our emails may contain small
                     electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel
                     gifs) that permit the Company, for example, to count users who have visited those pages or opened an
@@ -281,6 +268,16 @@
                 accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an
                 organization or a country unless there are adequate controls in place including the security of Your
                 data and other personal information.</p>
+            <h2>Delete Your Personal Data</h2>
+            <p>You have the right to delete or request that We assist in deleting the Personal Data that We have
+                collected about You.</p>
+            <p>Our Service may give You the ability to delete certain information about You from within the Service.</p>
+            <p>You may update, amend, or delete Your information at any time by signing in to Your Account, if you have
+                one, and visiting the account settings section that allows you to manage Your personal information. You
+                may also contact Us to request access to, correct, or delete any personal information that You have
+                provided to Us.</p>
+            <p>Please note, however, that We may need to retain certain information when we have a legal obligation or
+                lawful basis to do so.</p>
             <h2>Disclosure of Your Personal Data</h2>
             <h3>Business Transactions</h3>
             <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred.
@@ -304,25 +301,6 @@
             <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over
                 the Internet, or method of electronic storage is 100% secure. While We strive to use commercially
                 acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
-            <h1>Detailed Information on the Processing of Your Personal Data</h1>
-            <p>The Service Providers We use may have access to Your Personal Data. These third-party vendors collect,
-                store, use, process and transfer information about Your activity on Our Service in accordance with their
-                Privacy Policies.</p>
-            <h2>Usage, Performance and Miscellaneous</h2>
-            <p>We may use third-party Service Providers to provide better improvement of our Service.</p>
-            <ul>
-                <li>
-                    <p><strong>Google Places</strong></p>
-                    <p>Google Places is a service that returns information about places using HTTP requests. It is
-                        operated by Google</p>
-                    <p>Google Places service may collect information from You and from Your Device for security
-                        purposes.</p>
-                    <p>The information gathered by Google Places is held in accordance with the Privacy Policy of
-                        Google: <a href="https://www.google.com/intl/en/policies/privacy/"
-                            rel="external nofollow noopener"
-                            target="_blank">https://www.google.com/intl/en/policies/privacy/</a></p>
-                </li>
-            </ul>
             <h1>Children's Privacy</h1>
             <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally
                 identifiable information from anyone under the age of 13. If You are a parent or guardian and You are
@@ -348,7 +326,12 @@
             <h1>Contact Us</h1>
             <p>If you have any questions about this Privacy Policy, You can contact us:</p>
             <ul>
-                <li>By email: info@robex-co.com</li>
+                <li>
+                    <p>By email: cubeengineeringlimited@gmail.com</p>
+                </li>
+                <li>
+                    <p>By phone number: +256 776024658</p>
+                </li>
             </ul>
         </div>
         {{-- footer section --}}

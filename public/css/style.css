@@ -1929,7 +1929,7 @@ section {
 }
 
 .timeline-text h5{
-    color: var(--theme-color-2);
+    /* color: var(--theme-color-2); */
 }
 .timeline .timeline-img {
     position: relative;

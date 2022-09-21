@@ -9,29 +9,38 @@
                     <p><i class="fa fa-phone-alt"></i>+256 776024658</p>
                     <p><i class="fa fa-phone-alt"></i>+256774764199</p>
                     <p><i class="fa fa-phone-alt"></i>+256708881648</p>
-                    <p><i class="fa fa-envelope"></i>cubeengineeringlimited.com</p>
+                    <p><i class="fa fa-envelope"></i>cubeengineeringlimited@gmail.com</p>
                     <div class="footer-social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                        <a href=""><i class="fab fa-youtube"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
-                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
+                        {{-- <a href=""><i class="fab fa-facebook-f"></i></a> --}}
+                        {{-- <a href=""><i class="fab fa-youtube"></i></a> --}}
+                        {{-- <a href=""><i class="fab fa-instagram"></i></a> --}}
+                        {{-- <a href=""><i class="fab fa-linkedin-in"></i></a> --}}
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="footer-link">
                     <h2>Services Areas</h2>
-                    <a href="#services">Industrial installations</a>
+                    {{-- <a href="#services">Industrial installations</a>
                     <a href="#services">General supplies</a>
                     <a href="#services">Engineering services</a>
-                    <a href="#services">Oil & Gas</a>
+                    <a href="#services">Oil & Gas</a> --}}
+                    @php
+                        $services = App\Models\services::all();
+                    @endphp
+                    @foreach ($services as $service)
+                        <a href="{{ route('service.show', $service->id) }}"
+                            class="text-lowercase">{{ $service->name }}</a>
+                    @endforeach
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="footer-link">
                     <h2>Useful Pages</h2>
-                    @if (Request::is('privacy', 'service', 'terms'))
+                    @if (Request::is('privacy', 'terms','service/*'))
                         <a href="{{ route('index') }}">About Us</a>
                         <a href="{{ route('index') }}">Contact Us</a>
                         <a href="{{ route('index') }}">Projects</a>

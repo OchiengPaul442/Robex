@@ -11,8 +11,9 @@
     {{-- css link --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     {{-- main css --}}
-    <link rel="stylesheet" href="{{ asset('/css/loader.css') }}" type="text/css">
+    {{-- <link rel="stylesheet" href="{{ asset('/css/loader.css') }}" type="text/css"> --}}
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}" type="text/css">
+    {{-- <link rel="stylesheet" href="{{ asset('css/style.min.css') }}" type="text/css"> --}}
     {{-- lib css --}}
     <link rel="stylesheet" href="{{ asset('/lib/flaticon/font/flaticon.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('/lib/animate/animate.min.css') }}" type="text/css">
@@ -263,18 +264,18 @@
                     <h2>Services We Provide</h2>
                 </div>
                 <div class="row d-flex gap-4 justify-content-around flex-wrap">
-                    {{-- @foreach ($services as $service)
+                    @foreach ($services as $service)
                         <div class="service-card">
                             <input type="hidden" value="{{ $service->id }}">
                             <img src="{{ asset('assets/images/' . $service->image) }}" alt="">
                             <div class="service-card-content">
-                                <h2 class="service-card-title">{{ $service->name }}</h2>
+                                <h2 class="service-card-title text-capitalize">{{ $service->name }}</h2>
                                 <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
                                     More</a>
                             </div>
                         </div>
-                    @endforeach --}}
-                    <div class="service-card">
+                    @endforeach
+                    {{-- <div class="service-card">
                         <img src="{{ asset('img/industry.jpg') }}" alt="">
                         <div class="service-card-content">
                             <h2 class="service-card-title">INDUSTRIAL INSTALLATIONS</h2>
@@ -302,7 +303,7 @@
                             <h2 class="service-card-title">OIL & GAS</h2>
                             <a href="" class="serivce-button">Learn More</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </section>
@@ -317,7 +318,7 @@
             <div class="container-fluid bg-portfolio py-5">
                 <div class="container py-5">
                     <div class="row m-0 portfolio-container">
-                        {{-- @foreach ($projects as $project)
+                        @foreach ($projects as $project)
                             <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                                 <div class="position-relative overflow-hidden">
                                     <div class="portfolio-img">
@@ -327,9 +328,9 @@
                                     <div class="portfolio-text">
                                         <h4 class="font-weight-bold mb-4">{{ $project->projectname }}</h4>
                                         <div class="d-flex flex-column align-items-center justify-content-center">
-                                            <p>{{ $project->description }}</p>
+                                            <p class="text-center">{{ $project->description }}</p>
                                             </p>
-                                            <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-1.jpg"
+                                            <a class="btn btn-sm btn-secondary m-1" href="{{ asset('assets/images/' . $project->image) }}"
                                                 data-lightbox="portfolio">
                                                 <i class="fa fa-eye"></i>
                                             </a>
@@ -337,8 +338,8 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach --}}
-                        <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
+                        @endforeach
+                        {{-- <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                             <div class="position-relative overflow-hidden">
                                 <div class="portfolio-img">
                                     <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
@@ -397,7 +398,7 @@
                                 <div class="portfolio-text">
                                     <h4 class="font-weight-bold mb-4">Housing Project</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Supplied bearings for the construction of this lovely home at Entebbe</p>
+                                        <p>Supplied bearings for the construction of this lovely home at Entebbe.</p>
                                         <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-4.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
@@ -439,7 +440,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -457,7 +458,24 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div id="accordion-1">
-                                <div class="card wow fadeInLeft" data-wow-delay="0.1s">
+                                @foreach ($FAQs->slice(0,5) as $FAQ) 
+                                    <div class="card wow fadeInLeft" data-wow-delay="0.1s">
+                                        <div class="card-header">
+                                            <a class="card-link collapsed" data-toggle="collapse"
+                                                href="#collapse{{ $FAQ->id }}">
+                                                {{ $FAQ->question }}
+                                            </a>
+                                        </div>
+                                        <div id="collapse{{ $FAQ->id }}" class="collapse"
+                                            data-parent="#accordion-1">
+                                            <div class="card-body">
+                                                {{ $FAQ->answer }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                                {{-- <div class="card wow fadeInLeft" data-wow-delay="0.1s">
                                     <div class="card-header">
                                         <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
                                             Why should I get professional help for construction?
@@ -542,12 +560,28 @@
                                             quality engineering services to our customers.
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div id="accordion-2">
-                                <div class="card wow fadeInRight" data-wow-delay="0.1s">
+                                @foreach ($FAQs->slice(5,10) as $FAQ)
+                                    <div class="card wow fadeInLeft" data-wow-delay="0.{{ $FAQ->id }}s">
+                                        <div class="card-header">
+                                            <a class="card-link collapsed" data-toggle="collapse"
+                                                href="#collapse{{ $FAQ->id }}">
+                                                {{ $FAQ->question }}
+                                            </a>
+                                        </div>
+                                        <div id="collapse{{ $FAQ->id }}" class="collapse"
+                                            data-parent="#accordion-2">
+                                            <div class="card-body">
+                                                {{ $FAQ->answer }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                                {{-- <div class="card wow fadeInRight" data-wow-delay="0.1s">
                                     <div class="card-header">
                                         <a class="card-link collapsed" data-toggle="collapse" href="#collapseSix">
                                             What is the project turnaround time?
@@ -624,7 +658,7 @@
                                             value and therefore we sell our expertise as well as our own products.
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -644,12 +678,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="testimonial-slider-nav">
-                                {{-- @foreach ($testimonials as $testimonial)
-                                    <div class="slider-nav"><img src="{{ asset('assets/images/'.$testimonial->profileimage) }}"
+                                @foreach ($testimonials as $testimonial)
+                                    <div class="slider-nav"><img
+                                            src="{{ asset('assets/images/' . $testimonial->profileimage) }}"
                                             alt="Testimonial">
                                     </div>
-                                @endforeach --}}
-                                <div class="slider-nav"><img src="{{ asset('img/pro1.jpg') }}" alt="Testimonial">
+                                @endforeach
+                                {{-- <div class="slider-nav"><img src="{{ asset('img/pro1.jpg') }}" alt="Testimonial">
                                 </div>
                                 <div class="slider-nav"><img src="{{ asset('img/pro2.jpg') }}" alt="Testimonial">
                                 </div>
@@ -664,22 +699,22 @@
                                 <div class="slider-nav"><img src="{{ asset('img/pro3.jpg') }}" alt="Testimonial">
                                 </div>
                                 <div class="slider-nav"><img src="{{ asset('img/pro4.jpg') }}" alt="Testimonial">
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="testimonial-slider">
-                                {{-- @foreach ($testimonials as $testimonial)
+                                @foreach ($testimonials as $testimonial)
                                     <div class="slider-item">
                                         <h3>{{ $testimonial->customername }}</h3>
                                         <h4>{{ $testimonial->occupation }}</h4>
                                         <p>{{ $testimonial->comments }}
                                         </p>
                                     </div>
-                                @endforeach --}}
-                                <div class="slider-item">
+                                @endforeach
+                                {{-- <div class="slider-item">
                                     <h3>John Doe</h3>
                                     <h4>Business owner</h4>
                                     <p>Cube Engineering is prompt to responding to their client’s requests, especially
@@ -738,7 +773,7 @@
                                     <h4>Human Resource Manager</h4>
                                     <p>Great Job by the Outsource2india Team! Up to our standards!
                                     </p>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -779,7 +814,7 @@
                                     <i class="flaticon-send-mail"></i>
                                     <div class="contact-text">
                                         <h2>Email</h2>
-                                        <p>cubeengineeringlimited.com</p>
+                                        <p>cubeengineeringlimited@gmail.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -855,16 +890,15 @@
                                 <div class="timeline d-flex flex-column text-center rounded overflow-hidden">
                                     <div class="position-relative">
                                         <div class="timeline-img">
-                                            <img class="img-fluid w-100" src="{{ asset('img/augst 002.jpg') }}" alt="">
+                                            <img class="img-fluid w-100" src="{{ asset('img/augst 002.jpg') }}"
+                                                alt="">
                                         </div>
                                         <div
                                             class="timeline-social d-flex flex-column align-items-center justify-content-center">
-                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                            <a class="btn btn-secondary btn-social mb-2" href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
-                                                    class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-secondary btn-social" href="#"><i
-                                                    class="fab fa-linkedin-in"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2" href="https://mail.google.com"><i
+                                                    class="fa fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column timeline-text text-center py-4">
@@ -874,16 +908,15 @@
                                 <div class="timeline d-flex flex-column text-center rounded overflow-hidden">
                                     <div class="position-relative">
                                         <div class="timeline-img">
-                                            <img class="img-fluid w-100" src="{{ asset('img/augst 003(1).jpg') }}" alt="">
+                                            <img class="img-fluid w-100" src="{{ asset('img/augst 003(1).jpg') }}"
+                                                alt="">
                                         </div>
                                         <div
                                             class="timeline-social d-flex flex-column align-items-center justify-content-center">
-                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                            <a class="btn btn-secondary btn-social mb-2" href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
-                                                    class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-secondary btn-social" href="#"><i
-                                                    class="fab fa-linkedin-in"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2" href="https://mail.google.com"><i
+                                                    class="fa fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column timeline-text text-center py-4">
@@ -893,16 +926,15 @@
                                 <div class="timeline d-flex flex-column text-center rounded overflow-hidden">
                                     <div class="position-relative">
                                         <div class="timeline-img">
-                                            <img class="img-fluid w-100" src="{{ asset('img/new1.jpeg') }}" alt="">
+                                            <img class="img-fluid w-100" src="{{ asset('img/new1.jpeg') }}"
+                                                alt="">
                                         </div>
                                         <div
                                             class="timeline-social d-flex flex-column align-items-center justify-content-center">
-                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                            <a class="btn btn-secondary btn-social mb-2" href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
-                                                    class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-secondary btn-social" href="#"><i
-                                                    class="fab fa-linkedin-in"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2" href="https://mail.google.com"><i
+                                                    class="fa fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column timeline-text text-center py-4">
@@ -912,16 +944,15 @@
                                 <div class="timeline d-flex flex-column text-center rounded overflow-hidden">
                                     <div class="position-relative">
                                         <div class="timeline-img">
-                                            <img class="img-fluid w-100" src="{{ asset('img/sept03.jpg') }}" alt="">
+                                            <img class="img-fluid w-100" src="{{ asset('img/sept03.jpg') }}"
+                                                alt="">
                                         </div>
                                         <div
                                             class="timeline-social d-flex flex-column align-items-center justify-content-center">
-                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                            <a class="btn btn-secondary btn-social mb-2" href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
-                                                    class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-secondary btn-social" href="#"><i
-                                                    class="fab fa-linkedin-in"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2" href="https://mail.google.com"><i
+                                                    class="fa fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column timeline-text text-center py-4">
@@ -931,16 +962,15 @@
                                 <div class="timeline d-flex flex-column text-center rounded overflow-hidden">
                                     <div class="position-relative">
                                         <div class="timeline-img">
-                                            <img class="img-fluid w-100" src="{{ asset('img/new2.jpeg') }}" alt="">
+                                            <img class="img-fluid w-100" src="{{ asset('img/new2.jpeg') }}"
+                                                alt="">
                                         </div>
                                         <div
                                             class="timeline-social d-flex flex-column align-items-center justify-content-center">
-                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                            <a class="btn btn-secondary btn-social mb-2" href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
-                                                    class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-secondary btn-social" href="#"><i
-                                                    class="fab fa-linkedin-in"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2" href="https://mail.google.com"><i
+                                                    class="fa fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column timeline-text text-center py-4">
@@ -950,16 +980,15 @@
                                 <div class="timeline d-flex flex-column text-center rounded overflow-hidden">
                                     <div class="position-relative">
                                         <div class="timeline-img">
-                                            <img class="img-fluid w-100" src="{{ asset('img/SEPT 02.jpg') }}" alt="">
+                                            <img class="img-fluid w-100" src="{{ asset('img/SEPT 02.jpg') }}"
+                                                alt="">
                                         </div>
                                         <div
                                             class="timeline-social d-flex flex-column align-items-center justify-content-center">
-                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
+                                            <a class="btn btn-secondary btn-social mb-2" href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-secondary btn-social mb-2" href="#"><i
-                                                    class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-secondary btn-social" href="#"><i
-                                                    class="fab fa-linkedin-in"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2" href="https://mail.google.com"><i
+                                                    class="fa fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column timeline-text text-center py-4">
@@ -984,11 +1013,23 @@
         </section>
         {{-- end of google maps to business --}}
 
+        {{-- floating call button --}}
+        <section>
+            <span class="floating-call-btn">
+                <a href="tel:+256778823938">
+                    <i class="fa fa-phone my-float"></i>
+                </a>
+            </span>
+        </section>
+        {{-- end of floating call button --}}
+
         {{-- modals --}}
         @include('components.modals.errors')
         {{-- end of main content --}}
+
         {{-- footer section --}}
         @include('layouts.site.foot')
+
         {{-- back to top button --}}
         @include('components.Button.scrolltotop')
     </div>

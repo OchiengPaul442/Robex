@@ -1,12 +1,12 @@
 $(document).ready(function () {
+    $(window).scrollTop(0);
+
     $(".innerpoint").show();
 
-    $(window).scrollTop(0);
     // Complete page is fully loaded, including all frames, objects and images
     setTimeout(function () {
         $("body").addClass("loaded");
         $(".innerpoint").hide();
-        // scroll to top once loaded
     }, 5000);
 
     // Initiate the wowjs
@@ -139,4 +139,15 @@ $(document).ready(function () {
         items: 1,
         loop: true,
     });
+
+    $(".floating-call-btn").hide();
+    /* floating call button show on scoll*/
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $(".floating-call-btn").fadeIn();
+        } else {
+            $(".floating-call-btn").fadeOut();
+        }
+    }
+    );
 });

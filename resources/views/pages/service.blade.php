@@ -31,10 +31,10 @@
             <div class="service-category" id="industry-section">
                 <input type="hidden" value="{{ $service->id }}">
                 <div>
-                    <img src="{{ asset('assets/images/'.$service->image) }}" width="100%" height="450px" alt="">
+                    <img src="{{ asset('assets/images/'.$service->image) }}" width="100%" height="600px" alt="">
                 </div>
                 <div class="p-4" style="width:100%;">
-                    <h1>{{ $service->name }}</h1>
+                    <h1 class="text-capitalize">{{ $service->name }}</h1>
                     <ul>
                         {{ $service->details }}
                     </ul>
@@ -46,7 +46,7 @@
         @include('components.Button.scrolltotop')
     </div>
     {{-- loader --}}
-    {{-- @include('components.loaders.main') --}}
+    @include('components.loaders.main')
     {{-- js links --}}
     <script src="{{ asset('/js/main.js') }}"></script>
     <script src="{{ asset('js/validations.js') }}"></script>

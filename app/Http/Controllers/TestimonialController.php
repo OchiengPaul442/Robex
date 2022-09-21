@@ -103,7 +103,7 @@ class TestimonialController extends Controller
         $request->validate([
             'name' => 'required|max:55',
             'occupation' => 'required|max:255',
-            'comments' => 'required|max:255',
+            'comments' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 

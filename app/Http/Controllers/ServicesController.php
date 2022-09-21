@@ -40,7 +40,7 @@ class ServicesController extends Controller
         $request->validate([
             'name' => 'required|max:55',
             'description' => 'required|max:255',
-            'details' => 'required|max:255',
+            'details' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 

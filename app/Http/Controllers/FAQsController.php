@@ -38,7 +38,7 @@ class FAQsController extends Controller
     public function store(StoreFAQsRequest $request)
     {
         $request->validate([
-            'question' => 'required|max:55',
+            'question' => 'required|max:255',
             'answer' => 'required',
         ]);        
 
@@ -53,9 +53,9 @@ class FAQsController extends Controller
 
         // error checks
         if ($result) {
-            return redirect()->route('service.create')->with('success', 'Question and answer saved successfully.');
+            return redirect()->route('FAQs.create')->with('success', 'Question and answer saved successfully.');
         } else {
-            return redirect()->route('service.create')->with('fail', 'Something went wrong, try again later.');
+            return redirect()->route('FAQs.create')->with('fail', 'Something went wrong, try again later.');
         }
     }
 

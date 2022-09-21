@@ -53,7 +53,7 @@ class MessagesController extends Controller
         $result = $message->save();
 
         if ($result) {
-            return response()->json(['success' => 'Message sent successfully!']);
+            return response()->json(['success' => 'Message sent successfully!, We shall be contacting you within the next three working days, thank you for your response.']);
         } else {
             return response()->json(['error' => 'Error! Message not sent, please try again.']);
         }

@@ -46,7 +46,9 @@ class ServicesController extends Controller
 
         $imageName = time() . '.' . 'service' . '.' . $request->image->extension();
 
-        $request->image->move(public_path('/assets/images'), $imageName);
+        // $request->image->move(public_path('/assets/images'), $imageName);
+
+        $request->image->storeAs('public/images', $imageName);
 
         // creating new object for services
         $services = new services;
@@ -115,7 +117,9 @@ class ServicesController extends Controller
         if ($request->hasFile('image')) {
             $imageName = time() . '.' . 'service' . '.' . $request->image->extension();
 
-            $request->image->move(public_path('/assets/images'), $imageName);
+            // $request->image->move(public_path('/assets/images'), $imageName);
+
+            $request->image->storeAs('public/images', $imageName);
 
             $services->image = $imageName;
         }

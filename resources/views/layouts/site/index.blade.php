@@ -267,7 +267,7 @@
                     @foreach ($services as $service)
                         <div class="service-card">
                             <input type="hidden" value="{{ $service->id }}">
-                            <img src="{{ asset('assets/images/' . $service->image) }}" alt="">
+                            <img src="{{ asset('/storage/images/'.$service->image) }}" alt="">
                             <div class="service-card-content">
                                 <h2 class="service-card-title text-capitalize">{{ $service->name }}</h2>
                                 <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
@@ -323,7 +323,7 @@
                                 <div class="position-relative overflow-hidden">
                                     <div class="portfolio-img">
                                         <img class="img-fluid w-100"
-                                            src="{{ asset('assets/images/' . $project->image) }}" alt="">
+                                            src="{{ asset('/storage/images/'.$project->image) }}" alt="">
                                     </div>
                                     <div class="portfolio-text">
                                         <h4 class="font-weight-bold mb-4">{{ $project->projectname }}</h4>
@@ -680,7 +680,7 @@
                             <div class="testimonial-slider-nav">
                                 @foreach ($testimonials as $testimonial)
                                     <div class="slider-nav"><img
-                                            src="{{ asset('assets/images/' . $testimonial->profileimage) }}"
+                                            src="{{ asset('/storage/images/'.$testimonial->profileimage) }}"
                                             alt="Testimonial">
                                     </div>
                                 @endforeach

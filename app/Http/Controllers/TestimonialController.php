@@ -46,7 +46,9 @@ class TestimonialController extends Controller
 
         $imageName = time() . '.' . 'testimonials' . '.' . $request->image->extension();
         
-        $request->image->move(public_path('/assets/images'), $imageName);
+        // $request->image->move(public_path('/assets/images'), $imageName);
+
+        $request->image->storeAs('public/images', $imageName);
 
         // creating new object for news
         $testimonial = new Testimonial;
@@ -113,7 +115,10 @@ class TestimonialController extends Controller
         if ($request->hasFile('image')) {
             $imageName = time() . '.' . 'news' . '.' . $request->image->extension();
 
-            $request->image->move(public_path('/assets/images'), $imageName);
+            // $request->image->move(public_path('/assets/images'), $imageName);
+
+            $request->image->storeAs('public/images', $imageName);
+
 
             $testimonial->profileimage = $imageName;
         }

@@ -46,7 +46,9 @@ class ProjectsController extends Controller
 
         $imageName = time() . '.' . 'project' . '.' . $request->image->extension();
 
-        $request->image->move(public_path('/assets/images'), $imageName);
+        // $request->image->move(public_path('/assets/images'), $imageName);
+        
+        $request->image->storeAs('public/images', $imageName);
 
         // creating new object for news
         $news = new projects;
@@ -113,7 +115,9 @@ class ProjectsController extends Controller
         if ($request->hasFile('image')) {
             $imageName = time() . '.' . 'news' . '.' . $request->image->extension();
 
-            $request->image->move(public_path('/assets/images'), $imageName);
+            // $request->image->move(public_path('/assets/images'), $imageName);
+
+            $request->image->storeAs('public/images', $imageName);
 
             $projects->image = $imageName;
         }

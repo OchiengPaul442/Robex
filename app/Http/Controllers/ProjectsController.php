@@ -48,7 +48,7 @@ class ProjectsController extends Controller
 
         // $request->image->move(public_path('/assets/images'), $imageName);
         
-        $request->image->storeAs('public/images', $imageName);
+        $request->image->storeAs('public/images/', $imageName);
 
         // creating new object for news
         $news = new projects;

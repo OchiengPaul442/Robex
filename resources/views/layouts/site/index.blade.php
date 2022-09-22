@@ -275,44 +275,39 @@
                             </div>
                         </div>
                     @endforeach --}}
-                    @for ($i = 0; $i < 4; $i++)  
-                    @php
-                        $service = $services[$i];
-                    @endphp                  
-                        <div class="service-card">
-                            <img src="{{ asset('img/industry.jpg') }}" alt="">
-                            <div class="service-card-content">
-                                <h2 class="service-card-title">INDUSTRIAL INSTALLATIONS</h2>
-                                <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
-                                    More</a>
-                            </div>
+                    <div class="service-card">
+                        <img src="{{ asset('img/industry.jpg') }}" alt="">
+                        <div class="service-card-content">
+                            <h2 class="service-card-title">INDUSTRIAL INSTALLATIONS</h2>
+                            <a href="{{ route('service.show', $services->id) }}" class="serivce-button">Learn
+                                More</a>
                         </div>
-                        <div class="service-card">
-                            <img src="{{ asset('img/supplies.jpg') }}" alt="">
-                            <div class="service-card-content">
-                                <h2 class="service-card-title">GENERAL
-                                    SUPPLIES</h2>
-                                <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
-                                    More</a>
-                            </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="{{ asset('img/supplies.jpg') }}" alt="">
+                        <div class="service-card-content">
+                            <h2 class="service-card-title">GENERAL
+                                SUPPLIES</h2>
+                            <a href="{{ route('service.show', $services->id) }}" class="serivce-button">Learn
+                                More</a>
                         </div>
-                        <div class="service-card">
-                            <img src="{{ asset('img/electrical.jpg') }}" alt="">
-                            <div class="service-card-content">
-                                <h2 class="service-card-title">ENGINEERING SERVICES</h2>
-                                <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
-                                    More</a>
-                            </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="{{ asset('img/electrical.jpg') }}" alt="">
+                        <div class="service-card-content">
+                            <h2 class="service-card-title">ENGINEERING SERVICES</h2>
+                            <a href="{{ route('service.show', $services->id) }}" class="serivce-button">Learn
+                                More</a>
                         </div>
-                        <div class="service-card">
-                            <img src="{{ asset('img/oiland gas.jpg') }}" alt="">
-                            <div class="service-card-content">
-                                <h2 class="service-card-title">OIL & GAS</h2>
-                                <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
-                                    More</a>
-                            </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="{{ asset('img/oiland gas.jpg') }}" alt="">
+                        <div class="service-card-content">
+                            <h2 class="service-card-title">OIL & GAS</h2>
+                            <a href="{{ route('service.show', $services->id) }}" class="serivce-button">Learn
+                                More</a>
                         </div>
-                    @endfor
+                    </div>
                 </div>
             </div>
         </section>

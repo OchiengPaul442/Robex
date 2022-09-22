@@ -5,9 +5,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-4 col-md-12">
                     <div class="logo">
-                        <a href="">
-                            {{-- <h1>Cube Engineering</h1> --}}
-                            <img src="{{ asset('img/logo.svg') }}" alt="Logo">
+                        <a href="{{ route('index') }}">
+                            <img src="{{ asset('img/Group.png') }}" alt="Logo">
                         </a>
                     </div>
                 </div>

@@ -7,13 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- favicon --}}
-    <link rel="shortcut icon" href="{{ asset('img/logo-black.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
     {{-- css link --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     {{-- main css --}}
     <link rel="stylesheet" href="{{ asset('/css/loader.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}" type="text/css">
-    {{-- <link rel="stylesheet" href="{{ asset('/css/style.min.css') }}" type="text/css"> --}}
     {{-- lib css --}}
     <link rel="stylesheet" href="{{ asset('/lib/flaticon/font/flaticon.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('/lib/animate/animate.min.css') }}" type="text/css">
@@ -267,7 +266,7 @@
                     @foreach ($services as $service)
                         <div class="service-card">
                             <input type="hidden" value="{{ $service->id }}">
-                            <img src="{{ asset('img/construct-2.jpg') }}" alt="">
+                            <img src="{{ asset('img/supplies.jpg') }}" alt="">
                             <div class="service-card-content">
                                 <h2 class="service-card-title text-capitalize">{{ $service->name }}</h2>
                                 <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
@@ -328,7 +327,7 @@
                                     <div class="portfolio-text">
                                         <h4 class="font-weight-bold mb-4">{{ $project->projectname }}</h4>
                                         <div class="d-flex flex-column align-items-center justify-content-center">
-                                            <p class="text-center">{{ $project->description }}</p>
+                                            <p class="text-center" class="text-center">{{ $project->description }}</p>
                                             </p>
                                             <a class="btn btn-sm btn-secondary m-1" href="{{ asset('assets/images/' . $project->image) }}"
                                                 data-lightbox="portfolio">
@@ -342,13 +341,13 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                             <div class="position-relative overflow-hidden">
                                 <div class="portfolio-img">
-                                    <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+                                    <img class="img-fluid w-100" src="img/project2.jpg" alt="">
                                 </div>
                                 <div class="portfolio-text">
-                                    <h4 class="font-weight-bold mb-4">Office building</h4>
+                                    <h4 class="font-weight-bold mb-4">Industrial Installations</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Supplied cutting disks and plumbing items need for the completion of the Kings office building in bukoto.</p>
-                                        <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-1.jpg"
+                                        <p class="text-center">Industrial Installations (electrical and mechanical works).</p>
+                                        <a class="btn btn-sm btn-secondary m-1" href="img/project2.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
                                         </a>
@@ -359,13 +358,13 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                             <div class="position-relative overflow-hidden">
                                 <div class="portfolio-img">
-                                    <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
+                                    <img class="img-fluid w-100" src="img/aircon.jpg" alt="">
                                 </div>
                                 <div class="portfolio-text">
-                                    <h4 class="font-weight-bold mb-4">Forest Villa</h4>
+                                    <h4 class="font-weight-bold mb-4">Air Conditioning</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Carried out surveys and clearing of land for construction of a forest villa at kidepo national park.</p>
-                                        <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-2.jpg"
+                                        <p class="text-center">Installation of Air Conditioning Systems.</p>
+                                        <a class="btn btn-sm btn-secondary m-1" href="img/aircon.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
                                         </a>
@@ -379,9 +378,9 @@
                                     <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
                                 </div>
                                 <div class="portfolio-text">
-                                    <h4 class="font-weight-bold mb-4">Appartment project</h4>
+                                    <h4 class="font-weight-bold mb-4">Apartment project</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Supplied lifting belts to the Construction site at old Kampala.</p>
+                                        <p class="text-center">Supplied lifting belts to the Construction site at old Kampala.</p>
                                         <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-3.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
@@ -398,7 +397,7 @@
                                 <div class="portfolio-text">
                                     <h4 class="font-weight-bold mb-4">Housing Project</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Supplied bearings for the construction of this lovely home at Entebbe.</p>
+                                        <p class="text-center">Supplied bearings for the construction of this lovely home at Entebbe.</p>
                                         <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-4.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
@@ -415,7 +414,7 @@
                                 <div class="portfolio-text">
                                     <h4 class="font-weight-bold mb-4">Housing Project</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Supplied a number of solar warning lights to this lovely home located at Birongo off the express high way.</p>
+                                        <p class="text-center">Supplied a number of solar warning lights to this lovely home located at Birongo off the express high way.</p>
                                         <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-5.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
@@ -427,13 +426,13 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                             <div class="position-relative overflow-hidden">
                                 <div class="portfolio-img">
-                                    <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
+                                    <img class="img-fluid w-100" src="img/project1.jpg" alt="">
                                 </div>
                                 <div class="portfolio-text">
-                                    <h4 class="font-weight-bold mb-4">Mirembe Villas</h4>
+                                    <h4 class="font-weight-bold mb-4">Electrical Wiring</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Supplied electrical spares to Mirembe villas for the bedraggled tractor.</p>
-                                        <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-6.jpg"
+                                        <p class="text-center">Electrical Wiring (Residentials, Apartments and Storeyed buildings).</p>
+                                        <a class="btn btn-sm btn-secondary m-1" href="img/project1.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
                                         </a>

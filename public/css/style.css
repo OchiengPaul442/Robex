@@ -1691,6 +1691,7 @@ section {
     background-color: var(--theme-color-1);
 }
 
+
 @media (hover) {
     .service-card-content {
         transform: translateY(65%);
@@ -1739,6 +1740,10 @@ section {
     .main-service-con {
         padding: 10px;
     }
+    .service-category img{
+        width: 100%;
+    }
+    
 }
 
 .ser-con {

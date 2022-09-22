@@ -31,7 +31,7 @@
             <div class="service-category" id="industry-section">
                 <input type="hidden" value="{{ $service->id }}">
                 <div>
-                    <img src="{{ asset('img/carousel2.jpg') }}" width="100%" height="600px" alt="">
+                    <img src="{{ asset('img/tec.jpg') }}" width="auto" height="300px" alt="">
                 </div>
                 <div class="p-4" style="width:100%;">
                     <h1 class="text-capitalize">{{ $service->name }}</h1>

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- favicon --}}
 
-    <link rel="shortcut icon" href="{{ asset('img/logo-black.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('img/Group.png') }}" type="image/x-icon">
     {{-- main css --}}
     <link rel="stylesheet" href="{{ asset('css/loader.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">

@@ -266,7 +266,7 @@
                     @foreach ($services as $service)
                         <div class="service-card">
                             <input type="hidden" value="{{ $service->id }}">
-                            <img src="{{ asset('img/supplies.jpg') }}" alt="">
+                            <img src="/storage/images/.{{ $service->image }}" alt="">
                             <div class="service-card-content">
                                 <h2 class="service-card-title text-capitalize">{{ $service->name }}</h2>
                                 <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn

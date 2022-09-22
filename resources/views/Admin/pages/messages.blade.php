@@ -14,7 +14,6 @@
                         <tr>
                             <th>name</th>
                             <th>email</th>
-                            <th>Details</th>
                             <th>subject</th>
                             <th>message</th>
                             {{-- <th>Action</th> --}}
@@ -24,7 +23,6 @@
                         <tr>
                             <th>name</th>
                             <th>email</th>
-                            <th>Details</th>
                             <th>subject</th>
                             <th>message</th>
                             {{-- <th>Action</th> --}}

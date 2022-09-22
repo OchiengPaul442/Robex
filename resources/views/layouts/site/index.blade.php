@@ -275,7 +275,10 @@
                             </div>
                         </div>
                     @endforeach --}}
-                    @for ($i = 0; $i < 4; $i++)                    
+                    @for ($i = 0; $i < 4; $i++)  
+                    @php
+                        $service = $services[$i];
+                    @endphp                  
                         <div class="service-card">
                             <img src="{{ asset('img/industry.jpg') }}" alt="">
                             <div class="service-card-content">

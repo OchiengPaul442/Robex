@@ -49,7 +49,7 @@
         }
 
         .hero-text img{
-            width: 560px;
+            width: 580px;
             /* height: 100px; */
         }
 
@@ -66,7 +66,7 @@
     <div class="hero-image">
         <div class="hero-text">
             <h1>Welcome to</h1>
-            <img src="{{ asset('img/cubeslogo.png') }}" alt="">
+            <img src="{{ asset('img/Group.png') }}" alt="">
             <p>Your Best stop for all your Engineering needs.</p>
             <a href="{{ route('index') }}">
                 <button type="button" style="background: #FB8500" class="fs-2 btn btn-lg">Visit Us</button>

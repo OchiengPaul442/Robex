@@ -65,8 +65,8 @@
 <body style="background: #219dbc7a">
     <div class="hero-image">
         <div class="hero-text">
-            <h1>Welcome to</h1>
-            <img src="{{ asset('img/Group.png') }}" alt="">
+            <h3>Welcome to</h3>
+            <h1>CUBE ENGINEERING</h1>
             <p>Your Best stop for all your Engineering needs.</p>
             <a href="{{ route('index') }}">
                 <button type="button" style="background: #FB8500" class="fs-2 btn btn-lg">Visit Us</button>

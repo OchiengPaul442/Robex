@@ -284,6 +284,10 @@ section {
     #contact-btn-nav-2 {
         display: none;
     }
+    
+    .nav-bar.nav-sticky {
+    width: 100%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -1321,6 +1325,8 @@ section {
     position: relative;
     width: auto;
     padding-left: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .contact .contact-text h2 {
@@ -1333,6 +1339,8 @@ section {
     margin: 0;
     color: #ffffff;
     font-size: 16px;
+    /* text wrap */
+    word-wrap: break-word;
 }
 
 .contact .contact-item:last-child {
@@ -1877,6 +1885,22 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 0.3s ease;
+    animation: floating 1s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 4px 4px orange;
+    }
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 4px orange;
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 4px 4px orange;
+    }
 }
 
 .floating-call-btn:hover {

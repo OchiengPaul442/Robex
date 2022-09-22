@@ -264,47 +264,52 @@
                     <h2>Services We Provide</h2>
                 </div>
                 <div class="row d-flex gap-4 justify-content-around flex-wrap">
-                    @foreach ($services as $service)
+                    {{-- @foreach ($services as $service)
                         <div class="service-card">
                             <input type="hidden" value="{{ $service->id }}">
                             <img src="{{ asset('storage/images/'.$service->image) }}" alt="">
-                            {{-- <img src="{{ asset('img/industry.jpg') }}" alt=""> --}}
                             <div class="service-card-content">
                                 <h2 class="service-card-title text-capitalize">{{ $service->name }}</h2>
                                 <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
                                     More</a>
                             </div>
                         </div>
-                    @endforeach
-                    {{-- <div class="service-card">
-                        <img src="{{ asset('img/industry.jpg') }}" alt="">
-                        <div class="service-card-content">
-                            <h2 class="service-card-title">INDUSTRIAL INSTALLATIONS</h2>
-                            <a href="" class="serivce-button">Learn More</a>
+                    @endforeach --}}
+                    @for ($i = 0; $i < 4; $i++)                    
+                        <div class="service-card">
+                            <img src="{{ asset('img/industry.jpg') }}" alt="">
+                            <div class="service-card-content">
+                                <h2 class="service-card-title">INDUSTRIAL INSTALLATIONS</h2>
+                                <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
+                                    More</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-card">
-                        <img src="{{ asset('img/supplies.jpg') }}" alt="">
-                        <div class="service-card-content">
-                            <h2 class="service-card-title">GENERAL
-                                SUPPLIES</h2>
-                            <a href="" class="serivce-button">Learn More</a>
+                        <div class="service-card">
+                            <img src="{{ asset('img/supplies.jpg') }}" alt="">
+                            <div class="service-card-content">
+                                <h2 class="service-card-title">GENERAL
+                                    SUPPLIES</h2>
+                                <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
+                                    More</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-card">
-                        <img src="{{ asset('img/electrical.jpg') }}" alt="">
-                        <div class="service-card-content">
-                            <h2 class="service-card-title">ENGINEERING SERVICES</h2>
-                            <a href="" class="serivce-button">Learn More</a>
+                        <div class="service-card">
+                            <img src="{{ asset('img/electrical.jpg') }}" alt="">
+                            <div class="service-card-content">
+                                <h2 class="service-card-title">ENGINEERING SERVICES</h2>
+                                <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
+                                    More</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-card">
-                        <img src="{{ asset('img/oiland gas.jpg') }}" alt="">
-                        <div class="service-card-content">
-                            <h2 class="service-card-title">OIL & GAS</h2>
-                            <a href="" class="serivce-button">Learn More</a>
+                        <div class="service-card">
+                            <img src="{{ asset('img/oiland gas.jpg') }}" alt="">
+                            <div class="service-card-content">
+                                <h2 class="service-card-title">OIL & GAS</h2>
+                                <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
+                                    More</a>
+                            </div>
                         </div>
-                    </div> --}}
+                    @endfor
                 </div>
             </div>
         </section>
@@ -348,7 +353,8 @@
                                 <div class="portfolio-text">
                                     <h4 class="font-weight-bold mb-4">Office building</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Supplied cutting disks and plumbing items need for the completion of the Kings office building in bukoto.</p>
+                                        <p>Supplied cutting disks and plumbing items need for the completion of the
+                                            Kings office building in bukoto.</p>
                                         <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-1.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
@@ -365,7 +371,8 @@
                                 <div class="portfolio-text">
                                     <h4 class="font-weight-bold mb-4">Forest Villa</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Carried out surveys and clearing of land for construction of a forest villa at kidepo national park.</p>
+                                        <p>Carried out surveys and clearing of land for construction of a forest villa
+                                            at kidepo national park.</p>
                                         <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-2.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
@@ -416,7 +423,8 @@
                                 <div class="portfolio-text">
                                     <h4 class="font-weight-bold mb-4">Housing Project</h4>
                                     <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <p>Supplied a number of solar warning lights to this lovely home located at Birongo off the express high way.</p>
+                                        <p>Supplied a number of solar warning lights to this lovely home located at
+                                            Birongo off the express high way.</p>
                                         <a class="btn btn-sm btn-secondary m-1" href="img/portfolio-5.jpg"
                                             data-lightbox="portfolio">
                                             <i class="fa fa-eye"></i>
@@ -459,7 +467,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div id="accordion-1">
-                                @foreach ($FAQs->slice(0,5) as $FAQ) 
+                                @foreach ($FAQs->slice(0, 5) as $FAQ)
                                     <div class="card wow fadeInLeft" data-wow-delay="0.1s">
                                         <div class="card-header">
                                             <a class="card-link collapsed" data-toggle="collapse"
@@ -566,7 +574,7 @@
                         </div>
                         <div class="col-md-6">
                             <div id="accordion-2">
-                                @foreach ($FAQs->slice(5,10) as $FAQ)
+                                @foreach ($FAQs->slice(5, 10) as $FAQ)
                                     <div class="card wow fadeInRight" data-wow-delay="0.{{ $FAQ->id }}s">
                                         <div class="card-header">
                                             <a class="card-link collapsed" data-toggle="collapse"
@@ -896,10 +904,11 @@
                                         </div>
                                         <div
                                             class="timeline-social d-flex flex-column align-items-center justify-content-center">
-                                            <a class="btn btn-secondary btn-social mb-2" href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
+                                            <a class="btn btn-secondary btn-social mb-2"
+                                                href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-secondary btn-social mb-2" href="https://mail.google.com"><i
-                                                    class="fa fa-envelope"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2"
+                                                href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column timeline-text text-center py-4">
@@ -914,10 +923,11 @@
                                         </div>
                                         <div
                                             class="timeline-social d-flex flex-column align-items-center justify-content-center">
-                                            <a class="btn btn-secondary btn-social mb-2" href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
+                                            <a class="btn btn-secondary btn-social mb-2"
+                                                href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-secondary btn-social mb-2" href="https://mail.google.com"><i
-                                                    class="fa fa-envelope"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2"
+                                                href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column timeline-text text-center py-4">
@@ -932,10 +942,11 @@
                                         </div>
                                         <div
                                             class="timeline-social d-flex flex-column align-items-center justify-content-center">
-                                            <a class="btn btn-secondary btn-social mb-2" href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
+                                            <a class="btn btn-secondary btn-social mb-2"
+                                                href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-secondary btn-social mb-2" href="https://mail.google.com"><i
-                                                    class="fa fa-envelope"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2"
+                                                href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column timeline-text text-center py-4">
@@ -950,10 +961,11 @@
                                         </div>
                                         <div
                                             class="timeline-social d-flex flex-column align-items-center justify-content-center">
-                                            <a class="btn btn-secondary btn-social mb-2" href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
+                                            <a class="btn btn-secondary btn-social mb-2"
+                                                href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-secondary btn-social mb-2" href="https://mail.google.com"><i
-                                                    class="fa fa-envelope"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2"
+                                                href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column timeline-text text-center py-4">
@@ -968,10 +980,11 @@
                                         </div>
                                         <div
                                             class="timeline-social d-flex flex-column align-items-center justify-content-center">
-                                            <a class="btn btn-secondary btn-social mb-2" href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
+                                            <a class="btn btn-secondary btn-social mb-2"
+                                                href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-secondary btn-social mb-2" href="https://mail.google.com"><i
-                                                    class="fa fa-envelope"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2"
+                                                href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column timeline-text text-center py-4">
@@ -986,10 +999,11 @@
                                         </div>
                                         <div
                                             class="timeline-social d-flex flex-column align-items-center justify-content-center">
-                                            <a class="btn btn-secondary btn-social mb-2" href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
+                                            <a class="btn btn-secondary btn-social mb-2"
+                                                href="https://twitter.com/CubeEngineers?s=20&t=YOPh578w5sA3VX3KHRhieg"><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-secondary btn-social mb-2" href="https://mail.google.com"><i
-                                                    class="fa fa-envelope"></i></a>
+                                            <a class="btn btn-secondary btn-social mb-2"
+                                                href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column timeline-text text-center py-4">

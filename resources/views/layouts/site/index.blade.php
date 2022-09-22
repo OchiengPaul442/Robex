@@ -267,7 +267,7 @@
                     @foreach ($services as $service)
                         <div class="service-card">
                             <input type="hidden" value="{{ $service->id }}">
-                            <img src="{{ asset('img/carousel-2.jpg') }}" alt="">
+                            <img src="{{ asset('img/construct-2.jpg') }}" alt="">
                             <div class="service-card-content">
                                 <h2 class="service-card-title text-capitalize">{{ $service->name }}</h2>
                                 <a href="{{ route('service.show', $service->id) }}" class="serivce-button">Learn
@@ -814,7 +814,7 @@
                                     <i class="flaticon-send-mail"></i>
                                     <div class="contact-text">
                                         <h2>Email</h2>
-                                        <p>cubeengineeringlimited@gmail.com</p>
+                                        <p class="d-flex flex-wrap">cubeengineeringlimited@gmail.com</p>
                                     </div>
                                 </div>
                             </div>

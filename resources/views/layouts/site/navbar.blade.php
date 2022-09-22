@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ route('index') }}">
-                    <img src="{{ asset('img/logo.png') }}" width="45px" alt="">
+                    <img src="{{ asset('img/Group49.png') }}" width="150px" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

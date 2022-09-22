@@ -6,7 +6,7 @@
                 <div class="col-lg-4 col-md-12">
                     <div class="logo">
                         <a href="{{ route('index') }}">
-                            <img src="{{ asset('img/Group.png') }}" alt="Logo">
+                            <img src="{{ asset('img/Group49.png') }}" alt="Logo">
                         </a>
                     </div>
                 </div>

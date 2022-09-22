@@ -15,7 +15,8 @@ class MessagesController extends Controller
     public function index()
     {
         $title = 'Client Messages';
-        return view('Admin.pages.messages', compact('title'));        
+        $messages = messages::all();
+        return view('Admin.pages.messages', compact('title', 'messages'));        
     }
 
     /**

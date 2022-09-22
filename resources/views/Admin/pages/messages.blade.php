@@ -34,15 +34,14 @@
                         {{-- display all projects --}}
                         @foreach ($messages as $message)
                             <tr>
-                                <td>{{ $service->name }}</td>
+                                <td>{{ $message->name }}</td>
                                 <td>
                                     {{ $message->email }}
                                 </td>
                                 <td>{{ $message->subject }}</td>
                                 <td>
                                     {{ $message->message }}
-                                </td>
-                                
+                                </td>                                
                             </tr>
                         @endforeach
                     </tbody>

@@ -319,7 +319,7 @@
             <div class="container-fluid bg-portfolio py-5">
                 <div class="container py-5">
                     <div class="row m-0 portfolio-container">
-                        @foreach ($projects as $project)
+                        {{-- @foreach ($projects as $project)
                             <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                                 <div class="position-relative overflow-hidden">
                                     <div class="portfolio-img">
@@ -339,8 +339,8 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
-                        {{-- <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
+                        @endforeach --}}
+                        <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                             <div class="position-relative overflow-hidden">
                                 <div class="portfolio-img">
                                     <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
@@ -441,7 +441,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -679,13 +679,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="testimonial-slider-nav">
-                                @foreach ($testimonials as $testimonial)
+                                {{-- @foreach ($testimonials as $testimonial)
                                     <div class="slider-nav"><img
                                             src="{{ asset('/storage/images/'.$testimonial->profileimage) }}"
                                             alt="Testimonial">
                                     </div>
-                                @endforeach
-                                {{-- <div class="slider-nav"><img src="{{ asset('img/pro1.jpg') }}" alt="Testimonial">
+                                @endforeach --}}
+                                <div class="slider-nav"><img src="{{ asset('img/pro1.jpg') }}" alt="Testimonial">
                                 </div>
                                 <div class="slider-nav"><img src="{{ asset('img/pro2.jpg') }}" alt="Testimonial">
                                 </div>
@@ -700,22 +700,22 @@
                                 <div class="slider-nav"><img src="{{ asset('img/pro3.jpg') }}" alt="Testimonial">
                                 </div>
                                 <div class="slider-nav"><img src="{{ asset('img/pro4.jpg') }}" alt="Testimonial">
-                                </div> --}}
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="testimonial-slider">
-                                @foreach ($testimonials as $testimonial)
+                                {{-- @foreach ($testimonials as $testimonial)
                                     <div class="slider-item">
                                         <h3>{{ $testimonial->customername }}</h3>
                                         <h4>{{ $testimonial->occupation }}</h4>
                                         <p>{{ $testimonial->comments }}
                                         </p>
                                     </div>
-                                @endforeach
-                                {{-- <div class="slider-item">
+                                @endforeach --}}
+                                <div class="slider-item">
                                     <h3>John Okema</h3>
                                     <h4>Business owner</h4>
                                     <p>Cube Engineering is prompt to responding to their client’s requests, especially
@@ -774,7 +774,7 @@
                                     <h4>Human Resource Manager</h4>
                                     <p>Great Job by the Outsource2india Team! Up to our standards!
                                     </p>
-                                </div> --}}
+                                </div>
                             </div>
                         </div>
                     </div>
